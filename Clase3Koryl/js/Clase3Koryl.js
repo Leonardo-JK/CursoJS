@@ -1,4 +1,4 @@
-let numSecreto = Math.floor(Math.random()*100);
+let numSecreto = 50;//Math.floor(Math.random()*100);
 
 alert("Vamos a jugar a un juego. Tienes que adivinar el numero entre 0 y 99, y yo te dare pistas de que tan cerca estas. Tienes 5 intentos.");
 let numero = parseInt(prompt("¿Que numero estoy pensando? - Te quedan 5 intentos."));
@@ -17,14 +17,19 @@ for(i=5; i > 0; i--){
         }
 
         if(i >= 2){
-            if(diferencia <= 10){
-                numero = parseInt(prompt("Estas muy cerca de adivinarlo. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos."));
-            } else if(diferencia > 10 && diferencia <= 25) {
-                numero = parseInt(prompt("Te estas acercando. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos."));
-            } else if(diferencia > 25 && diferencia <= 50){
-                numero = parseInt(prompt("Estas lejos. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos."));
-            } else if( diferencia > 50) {
-                numero = parseInt(prompt("Estas muy lejos. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos."));
+            switch(true){
+                case (diferencia <= 10): 
+                    numero = parseInt(prompt("Estas muy cerca de adivinarlo. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos.")); 
+                    break;
+                case (diferencia > 10 && diferencia <= 25):
+                    numero = parseInt(prompt("Te estas acercando. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos.")); 
+                    break;
+                case (diferencia > 25 && diferencia <= 50):
+                    numero = parseInt(prompt("Estas lejos. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos.")); 
+                    break;
+                case (diferencia > 50):
+                    numero = parseInt(prompt("Estas muy lejos. ¡Intentalo de nuevo! - Te quedan " + (i-1) + " intentos.")); 
+                    break;
             }
         }
 
