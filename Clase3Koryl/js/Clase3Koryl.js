@@ -1,4 +1,4 @@
-let numSecreto = 50;//Math.floor(Math.random()*100);
+let numSecreto = Math.floor(Math.random()*100);
 
 alert("Vamos a jugar a un juego. Tienes que adivinar el numero entre 0 y 99, y yo te dare pistas de que tan cerca estas. Tienes 5 intentos.");
 let numero = parseInt(prompt("¿Que numero estoy pensando? - Te quedan 5 intentos."));
