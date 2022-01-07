@@ -1,0 +1,10 @@
+@import "../components/botones";
+
+.cuerpo {
+    &__contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
