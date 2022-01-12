@@ -17,7 +17,7 @@ const fauna = {
             familia: "mamiferos",
             peso: [100, 140],
             tamanno: [1.8, 1.9],
-            alimentacion: ["hierbas", "musgos", "tuberculos", "herbivoro"],
+            alimentacion: ["hierbas", "musgos", "tuberculos", "hervivoro"],
             habitat: ["matorrales", "montaña", "pendientes"],
             masculino: true
         },
@@ -318,8 +318,10 @@ function cuantoSabes(){
     let respCorr = 0;
     let msj;
     let numero; // Permite al usuario elegir cuantas preguntas van a formar parte del cuestionario.
+    let titulo = document.createElement("h3");
+    titulo.innerHTML("¿Cuanto Sabes?");
+    document.appendChild(parrafo);
 
-    alert("Bienvenido, a continuacion te hare unas preguntas para ver cuanto has aprendido sobre nuestra fauna local. Estas listo?");
     numero = prompt("Cuantas preguntas crees poder responder?");
 
     // -> Inicia la itereacion que genera las preguntas
@@ -391,10 +393,5 @@ function cuantoSabes(){
 }
 // <-
 
-let juego = prompt("¿Que juego quieres jugar?(introduce el numero)\n 1)- Cuanto Sabes...\n 2)- ¿Que animal es?");
-
-if(juego == 1){
-    cuantoSabes();
-} else if(juego == 2){
-    alert("Este juego no esta disponible, aun estamos trabajando en ello.")
-}
+let juego = document.getElementById("cuantoSabes");
+juego.onclick = cuantoSabes;

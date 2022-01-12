@@ -257,7 +257,7 @@ const fauna = {
 
 // -> Extraigo un animal del objeto en funcion del id ingresado
 function animalAleatorio(id){
-    for(let i = 0; i < fauna.animales.length; i++) {
+    for(const i of fauna.animales) {
         if(id === fauna.animales[i].id){
             return fauna.animales[i];
         }
@@ -277,7 +277,7 @@ function articulo(animal){
 
 // -> Determina si una respuesta es correecta cuando hay muchas opciones para dicha solucion
 function respuestaString(respuesta, correcto){
-    for(let j = 0; j < correcto.length; j++){
+    for(const j of correcto){
         if(respuesta === correcto[j]){
             return true;
         }
@@ -391,10 +391,7 @@ function cuantoSabes(){
 }
 // <-
 
-let juego = prompt("¿Que juego quieres jugar?(introduce el numero)\n 1)- Cuanto Sabes...\n 2)- ¿Que animal es?");
+let juego = document.getElementById("cuantoSabes");
+juego.onclick = cuantoSabes;
 
-if(juego == 1){
-    cuantoSabes();
-} else if(juego == 2){
-    alert("Este juego no esta disponible, aun estamos trabajando en ello.")
-}
+
