@@ -257,11 +257,7 @@ const fauna = {
 
 // -> Extraigo un animal del objeto en funcion del id ingresado
 function animalAleatorio(id){
-    for(let i = 0; i < fauna.animales.length; i++) {
-        if(id === fauna.animales[i].id){
-            return fauna.animales[i];
-        }
-    }
+    return fauna.animales.find(individuo => individuo.id === id);
 }
 // <-
 
@@ -295,7 +291,7 @@ function respuestaNumber(respuesta, correcto){
 
 // -> Analiza la respuesta ingresada segun el tipo de solucion que tenga dicha pregunta
 function analizarRespuesta(respuesta, caracteristica, correcto){
-    
+
     switch(caracteristica){
         case "alimento":
             return respuestaString(respuesta, correcto);
@@ -318,10 +314,8 @@ function cuantoSabes(){
     let respCorr = 0;
     let msj;
     let numero; // Permite al usuario elegir cuantas preguntas van a formar parte del cuestionario.
-    let titulo = document.createElement("h3");
-    titulo.innerHTML("¿Cuanto Sabes?");
-    document.appendChild(parrafo);
 
+    alert("Bienvenido, a continuacion te hare unas preguntas para ver cuanto has aprendido sobre nuestra fauna local. Estas listo?");
     numero = prompt("Cuantas preguntas crees poder responder?");
 
     // -> Inicia la itereacion que genera las preguntas
@@ -333,9 +327,9 @@ function cuantoSabes(){
         let respuesta;
         let correcto;
         let animal;
-                
+
         animal = articulo(animalAleatorio(id));
-        
+
         // -> Genera la estructura de la pregunta y su repuesta correcta
         switch (preg) {
             case 1:
@@ -343,7 +337,7 @@ function cuantoSabes(){
                 caracteristica = "alimento";
                 correcto = animalAleatorio(id).alimentacion;
                 break;
-                
+
             case 2:
                 pregunta = "Donde habita ";
                 caracteristica = "habitat";
@@ -369,7 +363,7 @@ function cuantoSabes(){
                 break;
         }
         // <- 
-        
+
         respuesta = prompt((p+1) + "°) - ¿" + pregunta + animal + "?");
 
         if(analizarRespuesta(respuesta, caracteristica, correcto)){
@@ -393,5 +387,10 @@ function cuantoSabes(){
 }
 // <-
 
-let juego = document.getElementById("cuantoSabes");
-juego.onclick = cuantoSabes;
+let juego = prompt("¿Que juego quieres jugar?(introduce el numero)\n 1)- Cuanto Sabes...\n 2)- ¿Que animal es?");
+
+if(juego == 1){
+    cuantoSabes();
+} else if(juego == 2){
+    alert("Este juego no esta disponible, aun estamos trabajando en ello.")
+}
