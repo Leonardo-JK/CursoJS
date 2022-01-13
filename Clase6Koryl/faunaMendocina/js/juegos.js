@@ -275,8 +275,8 @@ function articulo(animal){
 
 // -> Determina si una respuesta es correecta cuando hay muchas opciones para dicha solucion.
 function respuestaString(respuesta, correcto){
-    for(let j = 0; j < correcto.length; j++){
-        if(respuesta === correcto[j]){
+    for(const valor of correcto){
+        if(respuesta === valor){
             return true;
         }
     }
