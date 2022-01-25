@@ -556,6 +556,5 @@ window.addEventListener('load', function() {
 
     // -> Eventos que determinan lanzan los juegos.
     cuantoSabes.onclick = cargarCuantoSabes;
-    queAnimalEs.onclick = cargaQueAnimalEs; // -> Proximo juego a agregar <-
     // <-    
 }, false);
