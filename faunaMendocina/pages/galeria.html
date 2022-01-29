@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de imagenes de la fauna mendocina con fotos de alta calidad.">
+    <meta name="keywords" content="fauna, mendocina, galeria, imagenes, camoati, carpa, cascabel, austral, condor, coral, argentina, dientudo, gecko, salamanca, gorrion, grison, menor, halcon, peregrino, morenita, mosca, domestica, paloma, pejerrey, puma, tijereta, tortuga, terrestre, trucha, arcoiris, vinchuca, pintada, zorrillo, ,zorro, culpeo">
+    <title>Galeria | Fauna Mendocina</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Inicio Portada -->
+    <header class="header d-flex align-items-center containe col-12">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <div class="d-flex justify-content-center" style="height:15vh;">
+                        <img class="header__logo" src="../img/logo1b.png" alt="Logo de Fauna Mendocina">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <h1 class="header__titulo text-center">Fauna Mendocina</h1>
+                </div>
+                <div class="header__idioma col-1">
+                    <a href="galeria.html">ES</a> / <a href="galery.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Final Portada -->
+
+    <!-- Inicio nav con bootstrap -->
+    <div id="menu">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <!-- Inicio Ruta de Navegacion, para futuras aplicaciones, una vez se complejice mas la pagina-->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Galería</li>
+            </ol>
+            <!-- Final Ruta de Navegacion -->
+            <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../index.html#presentacion">Presentacion</a></li>
+                            <li><a class="dropdown-item" href="../index.html#introduccion">Introduccion</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="mapaSitio.html">Mapa del Sitio</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Indice
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="indice.html">Indice</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="indice.html#mamiferos">Mamiferos</a></li>
+                            <li><a class="dropdown-item" href="indice.html#aves">Aves</a></li>
+                            <li><a class="dropdown-item" href="indice.html#repanf">Reptiles/Anfibios</a></li>
+                            <li><a class="dropdown-item" href="indice.html#insectos">Insectos</a></li>
+                            <li><a class="dropdown-item" href="indice.html#peces">Peces</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Galería
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="galeria.html">Galeria</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria.html#mamiferos">Mamiferos</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#aves">Aves</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#repanf">Reptiles/Anfibios</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#insectos">Insectos</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#peces">Peces</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tablas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="tablas.html">Tablas</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Juegos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juegos.html">Juegos</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="contacto.html#redes">Redes</a></li>
+                            <li><a class="dropdown-item" href="contacto.html#ongs">ONG's</a></li>
+                            <li><a class="dropdown-item" href="contacto.html#contactanos">Contactanos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Final nav con bootstrap -->
+
+    <!-- Inicio seccion central con boostrap -->
+    <div class="d-flex containe col-12">
+        <!-- Inicio barra lateral, debe desaparecer para dispositivos pequeños -->
+        <aside class="col-md-3 aside">
+            <div>
+                <h3 class="aside__titulo">Informacion Util</h3>
+                <ol><h4>Cosejos sobre el comportamiento frente a la fauna salvaje:</h4>
+                    <li>
+                        <dt>SI ES POSIBLE, VISITE A LOS ANIMALES EN SU HÁBITAT NATURAL</dt>
+                        <dd>Si planea la opción más cómoda de visitar un santuario o zoológico, asegúrese de que cuenta con acreditación y una administración profesional.</dd>
+                    </li>
+                    <li>
+                        <dt>VER A LOS ANIMALES COMPORTARSE NATURALMENTE</dt>
+                        <dd>Los encantadores de serpientes y los circos de monos pueden ser atractivos, pero lo que sucede detrás del telón puede horrorizarlo. Para no fomentar estas prácticas, busque un santuario de elefantes respetado o tome un paseo en jeep para admirar a los elefantes en su hábitat natural.</dd>
+                    </li>
+                    <li>
+                        <dt>SE PROHÍBE ACARICIAR</dt>
+                        <dd>Esta instrucción podría decepcionarle, pero hay que comprender los malos tratos que rodean a las instalaciones que ofrecen experiencias de participación activa o contacto cercano con los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>GASTE EL DINERO DE FORMA SOSTENIBLE</dt>
+                        <dd>Si realmente le preocupa el bienestar de los animales y la sustentabilidad de la fauna silvestre, considere contratar a un grupo de expediciones en vez de organizar cada actividad usted mismo.</dd>
+                    </li>
+                    <li>
+                        <dt>RESPETE A LOS ANIMALES</dt>
+                        <dd>Es peligroso para usted y también puede causarle problemas al animal. Además, por supuesto, jamás alimente a los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>ATENCIÓN CON LOS RECUERDOS</dt>
+                        <dd>Asegúrese de evaluar cuidadosamente lo que lleve consigo a casa de su aventura con la fauna silvestre. </dd>
+                    </li>
+                </ol>
+            </div>    
+        </aside>
+        <!-- Final barra lateral -->
+
+
+        <section class="cuerpo contane-fluid col-md-9">
+            <!-- Inicio cuadro de botones de acceso rapido -->
+            <div class="cuerpo__botones containe-fluid col-12">
+                <nav class="navbar navbar-expand navbar-dark col-12" style="background-image: linear-gradient(rgb(36,60,88),rgb(110, 150, 196));">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="cuerpo__accesos collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-12">
+                                <li id="linkAcceso" class="nav-item">
+                                    <a class="nav-link" href="#mamiferos">Mamiferos</a>
+                                </li>
+                                <li id="linkAcceso" class="nav-item">
+                                    <a class="nav-link" href="#aves">Aves</a>
+                                </li>
+                                <li id="linkAcceso" class="nav-item">
+                                    <a class="nav-link" href="#repanf">Reptiles/Anfibios</a>
+                                </li>
+                                <li id="linkAcceso" class="nav-item">
+                                    <a class="nav-link" href="#insectos">Insectos</a>
+                                </li>
+                                <li id="linkAcceso" class="nav-item">
+                                    <a class="nav-link" href="#peces">Peces</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Final cuadro de botones de acceso rapido -->
+
+            <!-- Inicio contenido principal -->
+            <div class="cuerpo__contenido">
+                <h2 id="mamiferos" class="cuerpo__titulo1">Mamiferos</h2>
+                <ul class="cuerpo__galeria">
+                    <il><h3 id="grisonMenor" class="cuerpo__titulo2"><a href="indice.html#grisonMenor">Grison Menor</h3></a></il>
+                        <!-- Inicio Carousel con bootstrap -->
+                        <div id="carouselExampleFade1" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <!-- Inicio indicadores para el carousel, se matinenen para dispositivos chicos y medianos, deben desaparecer en dispositivos grandes -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleFade1" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            </div>
+                            <!-- Final indicadores para el carousel -->
+
+                            <!-- Inicio Carousel -->
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/grisonMenor0.jpg" class="d-block w-100" alt="Grison menor primer plano.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor1.jpg" class="d-block w-100" alt="Grison menor corriendo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor2.jpg" class="d-block w-100" alt="Manada de grison menores.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor3.jpg" class="d-block w-100" alt="Grison menor sobre un arbol.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor4.jpg" class="d-block w-100" alt="Grison menor visto desde arriba.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor5.jpg" class="d-block w-100" alt="Grison menor corriendo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor6.jpg" class="d-block w-100" alt="Grison menor de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/grisonMenor7.jpg" class="d-block w-100" alt="Grison menor trotando.">
+                                </div>
+                            </div>
+                            <!-- Final Carousel -->
+
+                            <!-- Inicio controles para el carousel, se matinenen para dispositivos chicos y medianos, deben desaparecer en dispositivos grandes -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <!-- Final controles para el carousel -->
+                        </div>
+                        <!-- Final Carousel con bootstrap -->
+                        
+                        <!-- Inicio album de fotos, solo debe aparecer para dispostivos grandes, para poder controlas el carousel -->
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="0" ><img class="img0" src="../img/grisonMenor0.jpg" alt="Grison menor primer plano."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="1" ><img class="img1" src="../img/grisonMenor1.jpg" alt="Grison menor corriendo."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="2" ><img class="img2" src="../img/grisonMenor2.jpg" alt="Manada de grison menores."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="3" ><img class="img3" src="../img/grisonMenor3.jpg" alt="Grison menor sobre un arbol."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="4" ><img class="img4" src="../img/grisonMenor4.jpg" alt="Grison menor visto desde arriba."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="5" ><img class="img5" src="../img/grisonMenor5.jpg" alt="Grison menor corriendo."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="6" ><img class="img6" src="../img/grisonMenor6.jpg" alt="Grison menor de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade1" data-bs-slide-to="7" ><img class="img7" src="../img/grisonMenor7.jpg" alt="Grison menor trotando."></a>
+                        </div>
+                        <!-- Final album de fotos -->
+
+                    <il><h3 id="guanaco" class="cuerpo__titulo2"><a href="indice.html#guanaco">Guanaco</a></h3></il>
+                    <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade2" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/guanaco0.jpg" class="d-block w-100" alt="Guanco observando el paisaje.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco1.jpg" class="d-block w-100" alt="Manada de guanacos mirando a la camara.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco2.jpg" class="d-block w-100" alt="Guanaco sobre una loma.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco3.jpg" class="d-block w-100" alt="Guanaco mirando a la camara.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco4.jpg" class="d-block w-100" alt="Manada de guanacos pastando.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco5.jpg" class="d-block w-100" alt="Manada de guanacos subiendo un cerro.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco6.jpg" class="d-block w-100" alt="Manada de guanacos subiendo un cerro.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/guanaco7.jpg" class="d-block w-100" alt="Guanaco pastando.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>  
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="0"><img class="img0" src="../img/guanaco0.jpg" alt="Guanco observando el paisaje."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="1"><img class="img1" src="../img/guanaco1.jpg" alt="Manada de guanacos mirando a la camara."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="2"><img class="img2" src="../img/guanaco2.jpg" alt="Guanaco sobre una loma."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="3"><img class="img3" src="../img/guanaco3.jpg" alt="Guanaco mirando a la camara."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="4"><img class="img4" src="../img/guanaco4.jpg" alt="Manada de guanacos pastando."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="5"><img class="img5" src="../img/guanaco5.jpg" alt="Manada de guanacos subiendo un cerro."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="6"><img class="img6" src="../img/guanaco6.jpg" alt="Manada de guanacos subiendo un cerro."></a>
+                            <a data-bs-target="#carouselExampleFade2" data-bs-slide-to="7"><img class="img7" src="../img/guanaco7.jpg" alt="Guanaco pastando."></a>
+                        </div>
+
+                    <il><h3 id="puma" class="cuerpo__titulo2"><a href="indice.html#puma">Puma</a></h3></il>
+                    <div id="carouselExampleFade3" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade3" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/puma0.jpg" class="d-block w-100" alt="Primer plano puma de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma1.jpg" class="d-block w-100" alt="Pumas sobre las rocas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma2.jpg" class="d-block w-100" alt="Puma junto a su cria.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma3.jpg" class="d-block w-100" alt="Puma sobre un arbol.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma4.jpg" class="d-block w-100" alt="Puma saltando de frente.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma5.jpg" class="d-block w-100" alt="Puma saltando de una roca a otra.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma6.jpg" class="d-block w-100" alt="Puma rugiendo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/puma7.jpg" class="d-block w-100" alt="Puma en la nieve.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>  
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="0"><img class="img0" src="../img/puma0.jpg" alt="Primer plano puma de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="1"><img class="img1" src="../img/puma1.jpg" alt="Pumas sobre las rocas."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="2"><img class="img2" src="../img/puma2.jpg" alt="Puma junto a su cria."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="3"><img class="img3" src="../img/puma3.jpg" alt="Puma sobre un arbol."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="4"><img class="img4" src="../img/puma4.jpg" alt="Puma saltando de frente."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="5"><img class="img5" src="../img/puma5.jpg" alt="Puma saltando de una roca a otra."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="6"><img class="img6" src="../img/puma6.jpg" alt="Puma rugiendo."></a>
+                            <a data-bs-target="#carouselExampleFade3" data-bs-slide-to="7"><img class="img7" src="../img/puma7.jpg" alt="Puma en la nieve."></a>
+                        </div>
+
+                    <il><h3 id="zorrillo" class="cuerpo__titulo2"><a href="indice.html#zorrillo">Zorrillo</a></h3></il>
+                    <div id="carouselExampleFade4" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade4" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/zorrillo0.jpg" class="d-block w-100" alt="Zorrillo en la yerba de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo1.jpg" class="d-block w-100" alt="Zorrillo en la yerba de frente.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo2.jpg" class="d-block w-100" alt="Zorrillo alimentandose.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo3.jpg" class="d-block w-100" alt="zorrillo sobre la nieve.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo4.jpg" class="d-block w-100" alt="Zorrillo en cautiverio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo5.jpg" class="d-block w-100" alt="Pareja de zorrillos en su madriguera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo6.jpg" class="d-block w-100" alt="Cria de zorrillo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorrillo7.jpg" class="d-block w-100" alt="Zorrillo entre las rocas.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade4" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade4" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>      
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="0"><img class="img0" src="../img/zorrillo0.jpg" alt="Zorrillo en la yerba de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="1"><img class="img1" src="../img/zorrillo1.jpg" alt="Zorrillo en la yerba de frente."></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="2"><img class="img2" src="../img/zorrillo2.jpg" alt="Zorrillo alimentandose."></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="3"><img class="img3" src="../img/zorrillo3.jpg" alt="zorrillo sobre la nieve."></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="4"><img class="img4" src="../img/zorrillo4.jpg" alt="Zorrillo en cautiverio."></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="5"><img class="img5" src="../img/zorrillo5.jpg" alt="Pareja de zorrillos en su madriguera"></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="6"><img class="img6" src="../img/zorrillo6.jpg" alt="Cria de zorrillo."></a>
+                            <a data-bs-target="#carouselExampleFade4" data-bs-slide-to="7"><img class="img7" src="../img/zorrillo7.jpg" alt="Zorrillo entre las rocas."></a>
+                        </div>
+
+                    <il><h3 id="zorroCulpeo" class="cuerpo__titulo2"><a href="indice.html#zorroCulpeo">Zorro Culpeo</a></h3></il>
+                    <div id="carouselExampleFade5" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade5" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/zorroCulpeo0.jpg" class="d-block w-100" alt="Zorro culpeo observando a la camara.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo1.jpg" class="d-block w-100" alt="Zorro culpeo recostado en la arena.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo2.jpg" class="d-block w-100" alt="Zorro culpeo a un costa de la carretera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo3.jpg" class="d-block w-100" alt="Zorro culpeo a un costa de la carretera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo4.jpg" class="d-block w-100" alt="Zorro culpeo sobre una roca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo5.jpg" class="d-block w-100" alt="Zorro culpeo observando a la camara de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo6.jpg" class="d-block w-100" alt="Zorro culpeo persiviendo algo a lo lejos.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/zorroCulpeo7.jpg" class="d-block w-100" alt="Zorro culpeo con su cria.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade5" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade5" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="0"><img class="img0" src="../img/zorroCulpeo0.jpg" alt="Zorro culpeo observando a la camara."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="1"><img class="img1" src="../img/zorroCulpeo1.jpg" alt="Zorro culpeo recostado en la arena."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="2"><img class="img2" src="../img/zorroCulpeo2.jpg" alt="Zorro culpeo a un costa de la carretera."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="3"><img class="img3" src="../img/zorroCulpeo3.jpg" alt="Zorro culpeo a un costa de la carretera."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="4"><img class="img4" src="../img/zorroCulpeo4.jpg" alt="Zorro culpeo sobre una roca."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="5"><img class="img5" src="../img/zorroCulpeo5.jpg" alt="Zorro culpeo observando a la camara de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="6"><img class="img6" src="../img/zorroCulpeo6.jpg" alt="Zorro culpeo persiviendo algo a lo lejos."></a>
+                            <a data-bs-target="#carouselExampleFade5" data-bs-slide-to="7"><img class="img7" src="../img/zorroCulpeo7.jpg" alt="Zorro culpeo con su cria."></a>
+                        </div>
+                </ul>
+                <h2 id="aves" class="cuerpo__titulo1">Aves</h2>
+                <ul class="cuerpo__galeria">
+                    <il><h3 id="condor" class="cuerpo__titulo2"><a href="indice.html#condor">Condor</h3></a></il>
+
+                    <div id="carouselExampleFade6" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade6" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/condor0.jpg" class="d-block w-100" alt="Condor en Vuelo sobre la cordillera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor1.jpg" class="d-block w-100" alt="Condor sobre una roca con las alas semiextendidas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor2.jpg" class="d-block w-100" alt="Condor con alas extendidas tomando sol.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor3.jpg" class="d-block w-100" alt="Pareja de condores relacionandose.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor4.jpg" class="d-block w-100" alt="Condor con alas extendidas tomando sol.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor5.jpg" class="d-block w-100" alt="Condor a punto de remontar el vuelo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor6.jpg" class="d-block w-100" alt="Condor de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/condor7.jpg" class="d-block w-100" alt="Condor en vuelo sobre el mar.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade6" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade6" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+        
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="0"><img class="img0" src="../img/condor0.jpg" alt="Condor en Vuelo sobre la cordillera."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="1"><img class="img1" src="../img/condor1.jpg" alt="Condor sobre una roca con las alas semiextendidas."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="2"><img class="img2" src="../img/condor2.jpg" alt="Condor con alas extendidas tomando sol."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="3"><img class="img3" src="../img/condor3.jpg" alt="Pareja de condores relacionandose."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="4"><img class="img4" src="../img/condor4.jpg" alt="Condor con alas extendidas tomando sol."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="5"><img class="img5" src="../img/condor5.jpg" alt="Condor a punto de remontar el vuelo."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="6"><img class="img6" src="../img/condor6.jpg" alt="Condor de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade6" data-bs-slide-to="7"><img class="img7" src="../img/condor7.jpg" alt="Condor en vuelo sobre el mar."></a>
+                        </div>
+                    <il><h3 id="gorrion" class="cuerpo__titulo2"><a href="indice.html#gorrion">Gorrión</h3></a></il>
+                        
+                    <div id="carouselExampleFade7" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade7" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/gorrion0.jpg" class="d-block w-100" alt="Gorrion en una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion1.jpg" class="d-block w-100" alt="Gorrion sobre un palo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion2.jpg" class="d-block w-100" alt="Goriion en una corniza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion3.jpg" class="d-block w-100" alt="Gorriones alimentandose de la mano de un transeunte.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion4.jpg" class="d-block w-100" alt="Gorrion sobre alambrada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion5.jpg" class="d-block w-100" alt="Gorriones tomando un baño.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion6.jpg" class="d-block w-100" alt="Gorrion en una cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/gorrion7.jpg" class="d-block w-100" alt="Gorrion de perfil.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade7" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade7" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="0"><img class="img0" src="../img/gorrion0.jpg" alt="Gorrion en una rama."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="1"><img class="img1" src="../img/gorrion1.jpg" alt="Gorrion sobre un palo."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="2"><img class="img2" src="../img/gorrion2.jpg" alt="Goriion en una corniza."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="3"><img class="img3" src="../img/gorrion3.jpg" alt="Gorriones alimentandose de la mano de un transeunte."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="4"><img class="img4" src="../img/gorrion4.jpg" alt="Gorrion sobre alambrada."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="5"><img class="img5" src="../img/gorrion5.jpg" alt="Gorriones tomando un baño."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="6"><img class="img6" src="../img/gorrion6.jpg" alt="Gorrion en una cerca."></a>
+                            <a data-bs-target="#carouselExampleFade7" data-bs-slide-to="7"><img class="img7" src="../img/gorrion7.jpg" alt="Gorrion de perfil."></a>
+                        </div>
+                    <il><h3 id="halconPeregrino" class="cuerpo__titulo2"><a href="indice.html#halconPeregrino">Halcón Peregrino</h3></a></il>
+                        
+                    <div id="carouselExampleFade8" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade8" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/halconPeregrino0.jpg" class="d-block w-100" alt="Halcon peregrino sobre una roca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino1.jpg" class="d-block w-100" alt="Halcon peregrino en vuelo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino2.jpg" class="d-block w-100" alt="Halcon peregrino en vuelo en picada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino3.jpg" class="d-block w-100" alt="Halcon peregrino en vuelo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino4.jpg" class="d-block w-100" alt="Halcon peregrino sobre una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino5.jpg" class="d-block w-100" alt="Halcon peregrino observando una presa.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino6.jpg" class="d-block w-100" alt="Halcon peregrino en vuelo a punto de tomar una presa.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/halconPeregrino7.jpg" class="d-block w-100" alt="Halcon peregrino en vuelo, visto desde arriba.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade8" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade8" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="0"><img class="img0" src="../img/halconPeregrino0.jpg" alt="Halcon peregrino sobre una roca."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="1"><img class="img1" src="../img/halconPeregrino1.jpg" alt="Halcon peregrino en vuelo."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="2"><img class="img2" src="../img/halconPeregrino2.jpg" alt="Halcon peregrino en vuelo en picada."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="3"><img class="img3" src="../img/halconPeregrino3.jpg" alt="Halcon peregrino en vuelo."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="4"><img class="img4" src="../img/halconPeregrino4.jpg" alt="Halcon peregrino sobre una rama."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="5"><img class="img5" src="../img/halconPeregrino5.jpg" alt="Halcon peregrino observando una presa."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="6"><img class="img6" src="../img/halconPeregrino6.jpg" alt="Halcon peregrino en vuelo a punto de tomar una presa."></a>
+                            <a data-bs-target="#carouselExampleFade8" data-bs-slide-to="7"><img class="img7" src="../img/halconPeregrino7.jpg" alt="Halcon peregrino en vuelo, visto desde arriba."></a>
+                        </div>
+                    <il><h3 id="paloma" class="cuerpo__titulo2"><a href="indice.html#paloma">Paloma</h3></a></il>
+                        
+                    <div id="carouselExampleFade9" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade9" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/paloma0.jpg" class="d-block w-100" alt="Paloma en vuelo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma1.jpg" class="d-block w-100" alt="Paloma de perfin, con la bandada de fondo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma2.jpg" class="d-block w-100" alt="Paloma sobre una cornisa.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma3.jpg" class="d-block w-100" alt="bandada de palomas sobre una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma4.jpg" class="d-block w-100" alt="Paloma en la acera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma5.jpg" class="d-block w-100" alt="Paloma sobre cordon.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma6.jpg" class="d-block w-100" alt="Paloma alimentando a su pichon.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/paloma7.jpg" class="d-block w-100" alt="Bandada de palomas sobre la acera.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade9" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade9" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="0"><img class="img0" src="../img/paloma0.jpg" alt="Paloma en vuelo."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="1"><img class="img1" src="../img/paloma1.jpg" alt="Paloma de perfin, con la bandada de fondo."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="2"><img class="img2" src="../img/paloma2.jpg" alt="Paloma sobre una cornisa."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="3"><img class="img3" src="../img/paloma3.jpg" alt="bandada de palomas sobre una rama."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="4"><img class="img4" src="../img/paloma4.jpg" alt="Paloma en la acera."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="5"><img class="img5" src="../img/paloma5.jpg" alt="Paloma sobre cordon."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="6"><img class="img6" src="../img/paloma6.jpg" alt="Paloma alimentando a su pichon."></a>
+                            <a data-bs-target="#carouselExampleFade9" data-bs-slide-to="7"><img class="img7" src="../img/paloma7.jpg" alt="Bandada de palomas sobre la acera."></a>
+                        </div>
+                    <il><h3 id="tijereta" class="cuerpo__titulo2"><a href="indice.html#tijereta">Tijereta</h3></a></il>
+                        
+                    <div id="carouselExampleFade10" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade10" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/tijereta0.jpg" class="d-block w-100" alt="Tijera sobra alambrada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta1.jpg" class="d-block w-100" alt="Tijereta sobre un palo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta2.jpg" class="d-block w-100" alt="Tijera sobra alambrada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta3.jpg" class="d-block w-100" alt="Tijererta en vuelo.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta4.jpg" class="d-block w-100" alt="Tijera sobra alambrada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta5.jpg" class="d-block w-100" alt="Tijera sobra una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta6.jpg" class="d-block w-100" alt="Tijera sobra una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tijereta7.jpg" class="d-block w-100" alt="Tijera sobra una roca.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade10" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade10" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="0"><img class="img0" src="../img/tijereta0.jpg" alt="Tijera sobra alambrada."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="1"><img class="img1" src="../img/tijereta1.jpg" alt="Tijereta sobre un palo."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="2"><img class="img2" src="../img/tijereta2.jpg" alt="Tijera sobra alambrada."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="3"><img class="img3" src="../img/tijereta3.jpg" alt="Tijererta en vuelo."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="4"><img class="img4" src="../img/tijereta4.jpg" alt="Tijera sobra alambrada."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="5"><img class="img5" src="../img/tijereta5.jpg" alt="Tijera sobra una rama."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="6"><img class="img6" src="../img/tijereta6.jpg" alt="Tijera sobra una rama."></a>
+                            <a data-bs-target="#carouselExampleFade10" data-bs-slide-to="7"><img class="img7" src="../img/tijereta7.jpg" alt="Tijera sobra una roca."></a>
+                        </div>
+                </ul>
+                <h2 id="repanf" class="cuerpo__titulo1">Reptiles/Anfibios</h2>
+                <ul class="cuerpo__galeria">
+                    <il><h3 id="cascabelAustral" class="cuerpo__titulo2"><a href="indice.html#cascabelAustral">Cascabel Austral</h3></a></il>
+                        
+                    <div id="carouselExampleFade11" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade11" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/cascabelAustral0.jpg" class="d-block w-100" alt="Cascabel austral sobre la arena.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral1.jpg" class="d-block w-100" alt="Cascabel austral en posicion de ataque.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral2.jpg" class="d-block w-100" alt="Cascabel austral enrrollada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral3.jpg" class="d-block w-100" alt="Cascabel austral despues de alimentarse.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral4.jpg" class="d-block w-100" alt="Cascabel austral enrrollada.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral5.jpg" class="d-block w-100" alt="Cascabel austral en posicion de ataque.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral6.jpg" class="d-block w-100" alt="Cascabel austral moviendo la cola.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/cascabelAustral7.jpg" class="d-block w-100" alt="Cascabel austral en posicion de ataque, de frente.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade11" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade11" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="0"><img class="img0" src="../img/cascabelAustral0.jpg" alt="Cascabel austral sobre la arena."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="1"><img class="img1" src="../img/cascabelAustral1.jpg" alt="Cascabel austral en posicion de ataque."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="2"><img class="img2" src="../img/cascabelAustral2.jpg" alt="Cascabel austral enrrollada."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="3"><img class="img3" src="../img/cascabelAustral3.jpg" alt="Cascabel austral despues de alimentarse."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="4"><img class="img4" src="../img/cascabelAustral4.jpg" alt="Cascabel austral enrrollada."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="5"><img class="img5" src="../img/cascabelAustral5.jpg" alt="Cascabel austral en posicion de ataque."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="6"><img class="img6" src="../img/cascabelAustral6.jpg" alt="Cascabel austral moviendo la cola."></a>
+                            <a data-bs-target="#carouselExampleFade11" data-bs-slide-to="7"><img class="img7" src="../img/cascabelAustral7.jpg" alt="Cascabel austral en posicion de ataque, de frente."></a>
+                        </div>
+                    <il><h3 id="coralArgentina" class="cuerpo__titulo2"><a href="indice.html#coralArgentina">Coral Argentina</h3></a></il>
+                        
+                    <div id="carouselExampleFade12" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade12" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/coralArgentina0.jpg" class="d-block w-100" alt="Coral argentina entre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina1.jpg" class="d-block w-100" alt="Coral argentina entre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina2.jpg" class="d-block w-100" alt="Coral argentina sobre la arena.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina3.jpg" class="d-block w-100" alt="Coral argentina entre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina4.jpg" class="d-block w-100" alt="Coral argentina entre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina5.jpg" class="d-block w-100" alt="Coral argentina sobre una roca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina6.jpg" class="d-block w-100" alt="Coral argentina entre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/coralArgentina7.jpg" class="d-block w-100" alt="Coral argentina enrrollada.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade12" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade12" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="0"><img class="img0" src="../img/coralArgentina0.jpg" alt="Coral argentina entre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="1"><img class="img1" src="../img/coralArgentina1.jpg" alt="Coral argentina entre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="2"><img class="img2" src="../img/coralArgentina2.jpg" alt="Coral argentina sobre la arena."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="3"><img class="img3" src="../img/coralArgentina3.jpg" alt="Coral argentina entre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="4"><img class="img4" src="../img/coralArgentina4.jpg" alt="Coral argentina entre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="5"><img class="img5" src="../img/coralArgentina5.jpg" alt="Coral argentina sobre una roca."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="6"><img class="img6" src="../img/coralArgentina6.jpg" alt="Coral argentina entre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade12" data-bs-slide-to="7"><img class="img7" src="../img/coralArgentina7.jpg" alt="Coral argentina enrrollada."></a>
+                        </div>
+                    <il><h3 id="geckoSalamanca" class="cuerpo__titulo2"><a href="indice.html#geckoSalamanca">Gecko Salamanca</h3></a></il>
+                        
+                    <div id="carouselExampleFade13" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade13" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/geckoSalamanca0.jpg" class="d-block w-100" alt="Gecko salamanca sobre las rocas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca1.jpg" class="d-block w-100" alt="Gecko salamanca sobre una roca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca2.jpg" class="d-block w-100" alt="Gecko salamanca trepado a una pared.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca3.jpg" class="d-block w-100" alt="Gecko salamanca sobre una roca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca4.jpg" class="d-block w-100" alt="Gecko salamanca trepado a una pared.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca5.jpg" class="d-block w-100" alt="Gecko salamanca en la acera">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca6.jpg" class="d-block w-100" alt="Gecko salamanca en una corniza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/geckoSalamanca7.jpg" class="d-block w-100" alt="Gecko salamanca de frente.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade13" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade13" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="0"><img class="img0" src="../img/geckoSalamanca0.jpg" alt="Gecko salamanca sobre las rocas."></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="1"><img class="img1" src="../img/geckoSalamanca1.jpg" alt="Gecko salamanca sobre una roca."></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="2"><img class="img2" src="../img/geckoSalamanca2.jpg" alt="Gecko salamanca trepado a una pared."></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="3"><img class="img3" src="../img/geckoSalamanca3.jpg" alt="Gecko salamanca sobre una roca."></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="4"><img class="img4" src="../img/geckoSalamanca4.jpg" alt="Gecko salamanca trepado a una pared."></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="5"><img class="img5" src="../img/geckoSalamanca5.jpg" alt="Gecko salamanca en la acera"></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="6"><img class="img6" src="../img/geckoSalamanca6.jpg" alt="Gecko salamanca en una corniza."></a>
+                            <a data-bs-target="#carouselExampleFade13" data-bs-slide-to="7"><img class="img7" src="../img/geckoSalamanca7.jpg" alt="Gecko salamanca de frente."></a>
+                        </div>
+                    <il><h3 id="tortugaPintada" class="cuerpo__titulo2"><a href="indice.html#tortugaPintada">Tortuga Pintada</h3></a></il>
+                        
+                    <div id="carouselExampleFade14" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade14" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/tortugaPintada0.jpg" class="d-block w-100" alt="Tortuga pintada asoleandose en la orilla del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada1.jpg" class="d-block w-100" alt="Tortuga pintada asoleandose sobre una rama caida.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada2.jpg" class="d-block w-100" alt="Tortuga pintada asoleandose en la hierba.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada3.jpg" class="d-block w-100" alt="Tortuga pintada asoleandose en una rama flotante.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada4.jpg" class="d-block w-100" alt="Tortuga pintada saliendo de su madriguera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada5.jpg" class="d-block w-100" alt="Tortuga pintada asoleandose en una roca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada6.jpg" class="d-block w-100" alt="Tortuga pintada nadando sobre el fondo del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaPintada7.jpg" class="d-block w-100" alt="Tortuga pintada asoleandose en la hierba.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade14" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade14" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="0"><img class="img0" src="../img/tortugaPintada0.jpg" alt="Tortuga pintada asoleandose en la orilla del rio."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="1"><img class="img1" src="../img/tortugaPintada1.jpg" alt="Tortuga pintada asoleandose sobre una rama caida."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="2"><img class="img2" src="../img/tortugaPintada2.jpg" alt="Tortuga pintada asoleandose en la hierba."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="3"><img class="img3" src="../img/tortugaPintada3.jpg" alt="Tortuga pintada asoleandose en una rama flotante."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="4"><img class="img4" src="../img/tortugaPintada4.jpg" alt="Tortuga pintada saliendo de su madriguera."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="5"><img class="img5" src="../img/tortugaPintada5.jpg" alt="Tortuga pintada asoleandose en una roca."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="6"><img class="img6" src="../img/tortugaPintada6.jpg" alt="Tortuga pintada nadando sobre el fondo del rio."></a>
+                            <a data-bs-target="#carouselExampleFade14" data-bs-slide-to="7"><img class="img7" src="../img/tortugaPintada7.jpg" alt="Tortuga pintada asoleandose en la hierba."></a>
+                        </div>
+                    <il><h3 id="tortugaTerrestreArgentina" class="cuerpo__titulo2"><a href="indice.html#tortugaTerrestreArgentina">Tortuga Terrestre Argentina</h3></a></il>
+                        
+                    <div id="carouselExampleFade15" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade15" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/tortugaTerrestreArgentina0.jpg" class="d-block w-100" alt="Tortuga terrestre argentina sobre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina1.jpg" class="d-block w-100" alt="Tortuga terrestre argentina sobre la maleza.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina2.jpg" class="d-block w-100" alt="Tortuga terrestre argentina sobre la acera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina3.jpg" class="d-block w-100" alt="Pareja de Tortugas terrestres argentinas sobre la maleza seca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina4.jpg" class="d-block w-100" alt="Tortuga terrestre argentina alimentandose.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina5.jpg" class="d-block w-100" alt="Tortuga terrestre argentina en la precordillera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina6.jpg" class="d-block w-100" alt="Tortuga terrestre argentina sobre la arena.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/tortugaTerrestreArgentina7.JPG" class="d-block w-100" alt="Tortuga terrestre argentina sobre la hierba.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade15" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade15" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="0"><img class="img0" src="../img/tortugaTerrestreArgentina0.jpg" alt="Tortuga terrestre argentina sobre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="1"><img class="img1" src="../img/tortugaTerrestreArgentina1.jpg" alt="Tortuga terrestre argentina sobre la maleza."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="2"><img class="img2" src="../img/tortugaTerrestreArgentina2.jpg" alt="Tortuga terrestre argentina sobre la acera."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="3"><img class="img3" src="../img/tortugaTerrestreArgentina3.jpg" alt="Pareja de Tortugas terrestres argentinas sobre la maleza seca."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="4"><img class="img4" src="../img/tortugaTerrestreArgentina4.jpg" alt="Tortuga terrestre argentina alimentandose."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="5"><img class="img5" src="../img/tortugaTerrestreArgentina5.jpg" alt="Tortuga terrestre argentina en la precordillera."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="6"><img class="img6" src="../img/tortugaTerrestreArgentina6.jpg" alt="Tortuga terrestre argentina sobre la arena."></a>
+                            <a data-bs-target="#carouselExampleFade15" data-bs-slide-to="7"><img class="img7" src="../img/tortugaTerrestreArgentina7.jpg" alt="Tortuga terrestre argentina sobre la hierba."></a>
+                        </div>
+                </ul>
+                <h2 id="insectos" class="cuerpo__titulo1">Insectos</h2>
+                <ul class="cuerpo__galeria">
+                    <il><h3 id="camoati" class="cuerpo__titulo2"><a href="indice.html#camoati">Camoati</h3></a></il>
+                        
+                    <div id="carouselExampleFade16" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade16" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/camoati0.jpg" class="d-block w-100" alt="Camoati sobre una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/camoati1.jpg" class="d-block w-100" alt="Camoati sobre una tabla de madera.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/camoati2.jpg" class="d-block w-100" alt="Nido de camoatis.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/camoati3.jpg" class="d-block w-100" alt="Camoati sobre una hoja.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/camoati4.jpg" class="d-block w-100" alt="Camoati sobre una flor.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/camoati5.jpg" class="d-block w-100" alt="Camoati construyendo un nido.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/camoati6.jpg" class="d-block w-100" alt="Camoati sobre una hoja.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/camoati7.jpg" class="d-block w-100" alt="Camoatis sobre su nido.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade16" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade16" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="0"><img class="img0" src="../img/camoati0.jpg" alt="Camoati sobre una rama."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="1"><img class="img1" src="../img/camoati1.jpg" alt="Camoati sobre una tabla de madera."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="2"><img class="img2" src="../img/camoati2.jpg" alt="Nido de camoatis."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="3"><img class="img3" src="../img/camoati3.jpg" alt="Camoati sobre una hoja."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="4"><img class="img4" src="../img/camoati4.jpg" alt="Camoati sobre una flor."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="5"><img class="img5" src="../img/camoati5.jpg" alt="Camoati construyendo un nido."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="6"><img class="img6" src="../img/camoati6.jpg" alt="Camoati sobre una hoja."></a>
+                            <a data-bs-target="#carouselExampleFade16" data-bs-slide-to="7"><img class="img7" src="../img/camoati7.jpg" alt="Camoatis sobre su nido."></a>
+                        </div>
+                    <il><h3 id="hormigaRojaArgentina" class="cuerpo__titulo2"><a href="indice.html#hormigaRojaArgentina">Hormiga Roja Argentina</h3></a></il>
+                        
+                    <div id="carouselExampleFade17" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade17" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/hormigaRojaArgentina0.jpg" class="d-block w-100" alt="Hormiga roja argentina de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina1.jpg" class="d-block w-100" alt="Enjambre de hormigas rojas argentinas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina2.jpg" class="d-block w-100" alt="Enjambre de hormigas rojas argentinas sobre una rama.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina3.jpg" class="d-block w-100" alt="Hormiga roja argentina de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina4.jpg" class="d-block w-100" alt="Hormiga roja argentina cuidando de las larvas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina5.jpg" class="d-block w-100" alt="Enjambre de hormigas rojas argentinas sobre la arena.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina6.jpg" class="d-block w-100" alt="hormigas rojas argentinas soldado, junto a dos obreras.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/hormigaRojaArgentina7.jpg" class="d-block w-100" alt="Hormiga roja argentina sobre una rama.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade17" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade17" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="0"><img class="img0" src="../img/hormigaRojaArgentina0.jpg" alt="Hormiga roja argentina de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="1"><img class="img1" src="../img/hormigaRojaArgentina1.jpg" alt="Enjambre de hormigas rojas argentinas."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="2"><img class="img2" src="../img/hormigaRojaArgentina2.jpg" alt="Enjambre de hormigas rojas argentinas sobre una rama."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="3"><img class="img3" src="../img/hormigaRojaArgentina3.jpg" alt="Hormiga roja argentina de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="4"><img class="img4" src="../img/hormigaRojaArgentina4.jpg" alt="Hormiga roja argentina cuidando de las larvas."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="5"><img class="img5" src="../img/hormigaRojaArgentina5.jpg" alt="Enjambre de hormigas rojas argentinas sobre la arena."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="6"><img class="img6" src="../img/hormigaRojaArgentina6.jpg" alt="hormigas rojas argentinas soldado, junto a dos obreras."></a>
+                            <a data-bs-target="#carouselExampleFade17" data-bs-slide-to="7"><img class="img7" src="../img/hormigaRojaArgentina7.jpg" alt="Hormiga roja argentina sobre una rama."></a>
+                        </div>
+                    <il><h3 id="moscaDomestica" class="cuerpo__titulo2"><a href="indice.html#moscaDomestica">Mosca Doméstica</h3></a></il>
+                        
+                    <div id="carouselExampleFade18" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade18" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/moscaDomestica0.jpg" class="d-block w-100" alt="Mosca domestica de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica1.jpg" class="d-block w-100" alt="Mosca domestica de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica2.jpg" class="d-block w-100" alt="Mosca domestica de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica3.jpg" class="d-block w-100" alt="Mosca domestica sobre una hoja.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica4.jpg" class="d-block w-100" alt="Mosca domestica sobre una hoja.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica5.jpg" class="d-block w-100" alt="Mosca domestica sobre una flor.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica6.jpg" class="d-block w-100" alt="Mosca domestica de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/moscaDomestica7.jpg" class="d-block w-100" alt="Mosca domestica de cerca.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade18" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade18" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="0"><img class="img0" src="../img/moscaDomestica0.jpg" alt="Mosca domestica de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="1"><img class="img1" src="../img/moscaDomestica1.jpg" alt="Mosca domestica de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="2"><img class="img2" src="../img/moscaDomestica2.jpg" alt="Mosca domestica de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="3"><img class="img3" src="../img/moscaDomestica3.jpg" alt="Mosca domestica sobre una hoja."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="4"><img class="img4" src="../img/moscaDomestica4.jpg" alt="Mosca domestica sobre una hoja."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="5"><img class="img5" src="../img/moscaDomestica5.jpg" alt="Mosca domestica sobre una flor."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="6"><img class="img6" src="../img/moscaDomestica6.jpg" alt="Mosca domestica de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade18" data-bs-slide-to="7"><img class="img7" src="../img/moscaDomestica7.jpg" alt="Mosca domestica de cerca."></a>
+                        </div>
+                    <il><h3 id="mosquitoComun" class="cuerpo__titulo2"><a href="indice.html#mosquitoComun">Mosquito Común</h3></a></il>
+                        
+                    <div id="carouselExampleFade19" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade19" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/mosquitoComun0.jpg" class="d-block w-100" alt="Mosquito comun de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun1.jpg" class="d-block w-100" alt="Mosquito comun de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun2.jpg" class="d-block w-100" alt="Mosquito comun de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun3.jpg" class="d-block w-100" alt="Mosquito comun a punto de picar.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun4.jpg" class="d-block w-100" alt="Mosquito comun alimentandose.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun5.jpg" class="d-block w-100" alt="Mosquito comun de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun6.jpg" class="d-block w-100" alt="Mosquito comun sobre una hoja.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/mosquitoComun7.jpg" class="d-block w-100" alt="Mosquito comun junto a sus larvas.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade19" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade19" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="0"><img class="img0" src="../img/mosquitoComun0.jpg" alt="Mosquito comun de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="1"><img class="img1" src="../img/mosquitoComun1.jpg" alt="Mosquito comun de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="2"><img class="img2" src="../img/mosquitoComun2.jpg" alt="Mosquito comun de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="3"><img class="img3" src="../img/mosquitoComun3.jpg" alt="Mosquito comun a punto de picar."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="4"><img class="img4" src="../img/mosquitoComun4.jpg" alt="Mosquito comun alimentandose."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="5"><img class="img5" src="../img/mosquitoComun5.jpg" alt="Mosquito comun de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="6"><img class="img6" src="../img/mosquitoComun6.jpg" alt="Mosquito comun sobre una hoja."></a>
+                            <a data-bs-target="#carouselExampleFade19" data-bs-slide-to="7"><img class="img7" src="../img/mosquitoComun7.jpg" alt="Mosquito comun junto a sus larvas."></a>
+                        </div>
+                    <il><h3 id="vinchuca" class="cuerpo__titulo2"><a href="indice.html#vinchuca">Vinchuca</h3></a></il>
+                        
+                    <div id="carouselExampleFade20" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade20" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/vinchuca0.jpg" class="d-block w-100" alt="Vinchuca de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca1.jpg" class="d-block w-100" alt="Vinchuca de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca2.jpg" class="d-block w-100" alt="Vinchuca sobre unas rocas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca3.jpg" class="d-block w-100" alt="Vinchuca de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca4.jpg" class="d-block w-100" alt="Vinchuca de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca5.jpg" class="d-block w-100" alt="Imagen no encontrada">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca6.jpg" class="d-block w-100" alt="Vinchuca de cerca.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/vinchuca7.jpg" class="d-block w-100" alt="Crias de vinchucas.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade20" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade20" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="0"><img class="img0" src="../img/vinchuca0.jpg" alt="Vinchuca de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="1"><img class="img1" src="../img/vinchuca1.jpg" alt="Vinchuca de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="2"><img class="img2" src="../img/vinchuca2.jpg" alt="Vinchuca sobre unas rocas."></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="3"><img class="img3" src="../img/vinchuca3.jpg" alt="Vinchuca de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="4"><img class="img4" src="../img/vinchuca4.jpg" alt="Vinchuca de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="5"><img class="img5" src="../img/vinchuca5.jpg" alt="Imagen no encontrada"></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="6"><img class="img6" src="../img/vinchuca6.jpg" alt="Vinchuca de cerca."></a>
+                            <a data-bs-target="#carouselExampleFade20" data-bs-slide-to="7"><img class="img7" src="../img/vinchuca7.jpg" alt="Crias de vinchucas."></a>
+                        </div>
+                </ul>
+                <h2 id="peces" class="cuerpo__titulo1">Peces</h2>
+                <ul class="cuerpo__galeria">
+                    <il><h3 id="carpa" class="cuerpo__titulo2"><a href="indice.html#carpa">Carpa</h3></a></il>
+                        
+                    <div id="carouselExampleFade21" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade21" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/carpa0.jpg" class="d-block w-100" alt="Carpa nadando.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa1.jpg" class="d-block w-100" alt="Carpa en el fonde del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa2.jpg" class="d-block w-100" alt="Carpa en el fonde del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa3.jpg" class="d-block w-100" alt="Carpa vistas desde superficie.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa4.jpg" class="d-block w-100" alt="Carpa asomandose a la superficie del agua.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa5.jpg" class="d-block w-100" alt="Carpa nadando.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa6.jpg" class="d-block w-100" alt="Carpa en el fonde del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/carpa7.jpg" class="d-block w-100" alt="Cardumen de carpas.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade21" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade21" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="0"><img class="img0" src="../img/carpa0.jpg" alt="Carpa nadando."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="1"><img class="img1" src="../img/carpa1.jpg" alt="Carpa en el fonde del rio."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="2"><img class="img2" src="../img/carpa2.jpg" alt="Carpa en el fonde del rio."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="3"><img class="img3" src="../img/carpa3.jpg" alt="Carpa vistas desde superficie."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="4"><img class="img4" src="../img/carpa4.jpg" alt="Carpa asomandose a la superficie del agua."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="5"><img class="img5" src="../img/carpa5.jpg" alt="Carpa nadando."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="6"><img class="img6" src="../img/carpa6.jpg" alt="Carpa en el fonde del rio."></a>
+                            <a data-bs-target="#carouselExampleFade21" data-bs-slide-to="7"><img class="img7" src="../img/carpa7.jpg" alt="Cardumen de carpas."></a>
+                        </div>
+                    <il><h3 id="dientudo" class="cuerpo__titulo2"><a href="indice.html#dientudo">Dientudo</h3></a></il>
+                        
+                    <div id="carouselExampleFade22" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade22" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/dientudo0.jpg" class="d-block w-100" alt="Dientudo de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo1.jpg" class="d-block w-100" alt="Dientudo de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo2.jpg" class="d-block w-100" alt="Dientudo de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo3.jpg" class="d-block w-100" alt="Dientudo en cautiverio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo4.jpg" class="d-block w-100" alt="Dientudo de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo5.jpg" class="d-block w-100" alt="Dientudo sostenido con la mano.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo6.jpg" class="d-block w-100" alt="Dientudo de perfil, en la que se observa su dentadura.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/dientudo7.jpg" class="d-block w-100" alt="Dientudo de perfil.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade22" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade22" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="0"><img class="img0" src="../img/dientudo0.jpg" alt="Dientudo de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="1"><img class="img1" src="../img/dientudo1.jpg" alt="Dientudo de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="2"><img class="img2" src="../img/dientudo2.jpg" alt="Dientudo de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="3"><img class="img3" src="../img/dientudo3.jpg" alt="Dientudo en cautiverio."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="4"><img class="img4" src="../img/dientudo4.jpg" alt="Dientudo de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="5"><img class="img5" src="../img/dientudo5.jpg" alt="Dientudo sostenido con la mano."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="6"><img class="img6" src="../img/dientudo6.jpg" alt="Dientudo de perfil, en la que se observa su dentadura."></a>
+                            <a data-bs-target="#carouselExampleFade22" data-bs-slide-to="7"><img class="img7" src="../img/dientudo7.jpg" alt="Dientudo de perfil."></a>
+                        </div> 
+                    <il><h3 id="morenita" class="cuerpo__titulo2"><a href="indice.html#morenita">Morenita</h3></a></il>
+                        
+                    <div id="carouselExampleFade23" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade23" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/morenita0.jpg" class="d-block w-100" alt="Morenita vista de atras.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita1.jpg" class="d-block w-100" alt="Morenita vista de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita2.jpg" class="d-block w-100" alt="Morenita en el fondo de un estanque.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita3.jpg" class="d-block w-100" alt="Morenita en el fondo del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita4.jpg" class="d-block w-100" alt="Cardumen de morenitas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita5.jpg" class="d-block w-100" alt="Cardumen de morenitas.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita6.jpg" class="d-block w-100" alt="Morenita vista de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/morenita7.jpg" class="d-block w-100" alt="Morenita asomandose a superficie.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade23" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade23" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                        
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="0"><img class="img0" src="../img/morenita0.jpg" alt="Morenita vista de atras."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="1"><img class="img1" src="../img/morenita1.jpg" alt="Morenita vista de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="2"><img class="img2" src="../img/morenita2.jpg" alt="Morenita en el fondo de un estanque."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="3"><img class="img3" src="../img/morenita3.jpg" alt="Morenita en el fondo del rio."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="4"><img class="img4" src="../img/morenita4.jpg" alt="Cardumen de morenitas."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="5"><img class="img5" src="../img/morenita5.jpg" alt="Cardumen de morenitas."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="6"><img class="img6" src="../img/morenita6.jpg" alt="Morenita vista de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade23" data-bs-slide-to="7"><img class="img7" src="../img/morenita7.jpg" alt="Morenita asomandose a superficie."></a>
+                        </div>
+                    <il><h3 id="pejerrey" class="cuerpo__titulo2"><a href="indice.html#pejerrey">Pejerrey</h3></a></il>
+                        
+                    <div id="carouselExampleFade24" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade24" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/pejerrey0.jpg" class="d-block w-100" alt="Pejerrey junto a restos en un rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey1.jpg" class="d-block w-100" alt="Pejerrey de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey2.jpg" class="d-block w-100" alt="Cardumen de pejerreyes.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey3.jpg" class="d-block w-100" alt="Cardumen de pejerreyes asomandose a superficie.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey4.jpg" class="d-block w-100" alt="Pejerrey en el fondo del rio.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey5.jpg" class="d-block w-100" alt="Cardumen de pejerreyes.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey6.jpg" class="d-block w-100" alt="Pejerreyes sostenido con la mano.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/pejerrey7.jpg" class="d-block w-100" alt="Pejerrey de perfil.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade24" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade24" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="0"><img class="img0" src="../img/pejerrey0.jpg" alt="Pejerrey junto a restos en un rio."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="1"><img class="img1" src="../img/pejerrey1.jpg" alt="Pejerrey de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="2"><img class="img2" src="../img/pejerrey2.jpg" alt="Cardumen de pejerreyes."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="3"><img class="img3" src="../img/pejerrey3.jpg" alt="Cardumen de pejerreyes asomandose a superficie."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="4"><img class="img4" src="../img/pejerrey4.jpg" alt="Pejerrey en el fondo del rio."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="5"><img class="img5" src="../img/pejerrey5.jpg" alt="Cardumen de pejerreyes."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="6"><img class="img6" src="../img/pejerrey6.jpg" alt="Pejerreyes sostenido con la mano."></a>
+                            <a data-bs-target="#carouselExampleFade24" data-bs-slide-to="7"><img class="img7" src="../img/pejerrey7.jpg" alt="Pejerrey de perfil."></a>
+                        </div>
+                    <il><h3 id="truchaArcoiris" class="cuerpo__titulo2"><a href="indice.html#truchaArcoiris">Trucha Arcoiris</h3></a></il>
+                        
+                    <div id="carouselExampleFade25" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade25" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        
+                            <div id="carousel" class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/truchaArcoiris0.jpg" class="d-block w-100" alt="Trucha arcoiris de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/truchaArcoiris1.jpg" class="d-block w-100" alt="Trucha arcoiris de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/truchaArcoiris2.jpg" class="d-block w-100" alt="Trucha arcoiris vista desde superficie.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/truchaArcoiris3.jpg" class="d-block w-100" alt="Cardumen de Truchas arcoiris.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/truchaArcoiris4.jpg" class="d-block w-100" alt="Trucha arcoiris de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/truchaArcoiris5.jpg" class="d-block w-100" alt="Trucha arcoiris vista desde arriba.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/truchaArcoiris6.jpg" class="d-block w-100" alt="Trucha arcoiris de perfil.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/truchaArcoiris7.jpg" class="d-block w-100" alt="Trucha arcoiris vista desde arriba.">
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade25" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade25" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div> 
+                    
+                        <div class="cuerpo__imagenesGaleria">
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="0"><img class="img0" src="../img/truchaArcoiris0.jpg" alt="Trucha arcoiris de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="1"><img class="img1" src="../img/truchaArcoiris1.jpg" alt="Trucha arcoiris de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="2"><img class="img2" src="../img/truchaArcoiris2.jpg" alt="Trucha arcoiris vista desde superficie."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="3"><img class="img3" src="../img/truchaArcoiris3.jpg" alt="Cardumen de Truchas arcoiris."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="4"><img class="img4" src="../img/truchaArcoiris4.jpg" alt="Trucha arcoiris de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="5"><img class="img5" src="../img/truchaArcoiris5.jpg" alt="Trucha arcoiris vista desde arriba."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="6"><img class="img6" src="../img/truchaArcoiris6.jpg" alt="Trucha arcoiris de perfil."></a>
+                            <a data-bs-target="#carouselExampleFade25" data-bs-slide-to="7"><img class="img7" src="../img/truchaArcoiris7.jpg" alt="Trucha arcoiris vista desde arriba."></a>
+                        </div>
+                </ul>
+            </div>
+            <!-- Final contenido principal -->
+        </section>
+    </div>
+    <!-- Final seccion central con boostrap -->
+
+    <footer class="footer">
+        <p>2021 Leonardo Koryl - Proyecto Final</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>   
+
+</body>
+</html>

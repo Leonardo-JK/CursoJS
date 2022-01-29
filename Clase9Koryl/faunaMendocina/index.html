@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En momentos en que distintas especies animales ganan terreno debido a la emergencia sanitaria y al aislamiento social, preventivo y obligatorio, y por ende el contacto entre humanos y animales salvajes se volverá más habitual una vez la sociedad retome su rutina normal.">
+    <meta name="keywords" content="fauna mendocina montaña mendoza animales salvajes">
+    <title>Inicio | Fauna Mendocina</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Inicio Portada -->
+    <header class="header d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <div class="d-flex justify-content-center" style="height:15vh;">
+                        <img class="header__logo" src="../img/logo1b.png" alt="Logo de Fauna Mendocina">
+                    </div>
+                </div>
+                <div class="col-8">
+                    <h1 class="header__titulo text-center">Fauna Mendocina</h1>
+                </div>
+                <div class="header__idioma col-1">
+                    <a href="index.html">ES</a> / <a href="pages/home.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Final Portada -->
+
+    <!-- Inicio nav con bootstrap -->
+    <div id="menu">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <!-- Inicio Ruta de Navegacion -->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="index.html">Inicio</a></li>
+            </ol>
+            <!-- Final Ruta de Navegacion -->
+            <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#presentacion">Presentacion</a></li>
+                            <li><a class="dropdown-item" href="#introduccion">Introduccion</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/mapaSitio.html">Mapa del Sitio</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Indice
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="pages/indice.html">Indice</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/indice.html#mamiferos">Mamiferos</a></li>
+                            <li><a class="dropdown-item" href="pages/indice.html#aves">Aves</a></li>
+                            <li><a class="dropdown-item" href="pages/indice.html#repanf">Reptiles/Anfibios</a></li>
+                            <li><a class="dropdown-item" href="pages/indice.html#insectos">Insectos</a></li>
+                            <li><a class="dropdown-item" href="pages/indice.html#peces">Peces</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Galería
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="pages/galeria.html">Galeria</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/galeria.html#mamiferos">Mamiferos</a></li>
+                            <li><a class="dropdown-item" href="pages/galeria.html#aves">Aves</a></li>
+                            <li><a class="dropdown-item" href="pages/galeria.html#repanf">Reptiles/Anfibios</a></li>
+                            <li><a class="dropdown-item" href="pages/galeria.html#insectos">Insectos</a></li>
+                            <li><a class="dropdown-item" href="pages/galeria.html#peces">Peces</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tablas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="pages/tablas.html">Tablas</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Juegos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="pages/juegos.html">Juegos</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="pages/contacto.html">Contacto</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="pages/contacto.html#redes">Redes</a></li>
+                            <li><a class="dropdown-item" href="pages/contacto.html#ongs">ONG's</a></li>
+                            <li><a class="dropdown-item" href="pages/contacto.html#contactanos">Contactanos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Final nav con bootstrap -->
+
+    <!-- Inicio seccion central con boostrap -->
+    <div class="d-flex containe col-12">
+        <!-- Inicio barra lateral, debe desaparecer para dispositivos pequeños -->
+        <aside class="col-md-3 aside">
+            <div>
+                <h3 class="aside__titulo">Informacion Util</h3>
+                <ol><h4>Cosejos sobre el comportamiento frente a la fauna salvaje:</h4>
+                    <li>
+                        <dt>SI ES POSIBLE, VISITE A LOS ANIMALES EN SU HÁBITAT NATURAL</dt>
+                        <dd>Si planea la opción más cómoda de visitar un santuario o zoológico, asegúrese de que cuenta con acreditación y una administración profesional.</dd>
+                    </li>
+                    <li>
+                        <dt>VER A LOS ANIMALES COMPORTARSE NATURALMENTE</dt>
+                        <dd>Los encantadores de serpientes y los circos de monos pueden ser atractivos, pero lo que sucede detrás del telón puede horrorizarlo. Para no fomentar estas prácticas, busque un santuario de elefantes respetado o tome un paseo en jeep para admirar a los elefantes en su hábitat natural.</dd>
+                    </li>
+                    <li>
+                        <dt>SE PROHÍBE ACARICIAR</dt>
+                        <dd>Esta instrucción podría decepcionarle, pero hay que comprender los malos tratos que rodean a las instalaciones que ofrecen experiencias de participación activa o contacto cercano con los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>GASTE EL DINERO DE FORMA SOSTENIBLE</dt>
+                        <dd>Si realmente le preocupa el bienestar de los animales y la sustentabilidad de la fauna silvestre, considere contratar a un grupo de expediciones en vez de organizar cada actividad usted mismo.</dd>
+                    </li>
+                    <li>
+                        <dt>RESPETE A LOS ANIMALES</dt>
+                        <dd>Es peligroso para usted y también puede causarle problemas al animal. Además, por supuesto, jamás alimente a los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>ATENCIÓN CON LOS RECUERDOS</dt>
+                        <dd>Asegúrese de evaluar cuidadosamente lo que lleve consigo a casa de su aventura con la fauna silvestre. </dd>
+                    </li>
+                </ol>
+            </div>    
+        </aside>
+        <!-- Final barra lateral -->
+
+        <section class="cuerpo col-md-9">
+            <div class="cuerpo__videosIntro">
+                <iframe class="cuerpo__iframe" width="560" height="315" src="https://www.youtube.com/embed/28yQGZRFqJ4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="cuerpo__iframe" width="560" height="315" src="https://www.youtube.com/embed/E5ma-Y2FyCc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    
+            <article class="cuerpo__presentacion" id="presentacion">
+                <h2 class="cuerpo__titulo1">Presentacion</h2>
+                <img class="cuerpo__imgPresentacion" src="img/condorPresentacion.jpg" alt="Fotografia de un condor andino en vuelo">
+                <p>En momentos en que distintas especies animales ganan terreno debido a la emergencia sanitaria y al aislamiento social, preventivo y obligatorio, y por ende el contacto entre humanos y animales salvajes se volverá más habitual una vez la sociedad retome su rutina normal. Por esta razón es que esta página tiene por objeto desarrollar estrategias de protección a partir de concientizar sobre la importancia de algunas especies en nuestra provincia. Esta información será utilizada luego como un indicador de gestión de calidad ambiental.</p>
+                <p>Para tal fin, buscaremos crear una fuente de información confiable la cual permita al usuario aprender de la fauna local, de esta forma sabrá con que se enfrenta y como proceder para evitar cualquier conflicto que pueda originar un peligro hacia su persona como asi tambien al animal en cuestión.</p>
+                <p>En esta página tambien podrá encontrar información sobre asociaciones y ONG's vinculados a la fauna silvestre, las cuales no solo podrán brindar más información, sino que tambien podrán brindar soporte en casos extremos en los cuales se necesite de ayuda especializada para el trato con la fauna silvestre.</p>
+            </article>
+    
+            <article class="cuerpo__introduccion" id="introduccion">
+                <h2 class="cuerpo__titulo1">Introduccion</h2>
+                <p>La provincia de Mendoza cuenta con gran variedad de mamíferos. Entre los carnívoros pueden mencionarse el zorro —tanto gris como colorado—, zorrinos, hurones, pumas y comadrejas, cuenta además con gran variedad de mamíferos carnívoros y avícolas que se refugian en cuevas durante el día, especialmente pumas o leones de montaña. Hay ejemplares avícolas que se refugian durante el día en cuevas, como el pichiciego mendocino. En el distrito andino se ven cóndores y en el subandino aves de rapiña: águilas y gavilanes, a lo que se suman roedores como ratones y cuises, búhos, pecho colorado, pititorras y distintos tipos de ofidios e insectos. Hacia el sur se visualizan zorrinos, vizcachas, guanacos, perdices, ñandúes, y aves como cardenales y cotorritas. También habitan la región aves acuáticas, como el cisne de cuello negro, la garza y los flamencos. Asi mismo, el ñandú y ñandú petiso, que es una especie de ave terrestre, típica de zona montañosa..</p>
+                <div class="cuerpo__intros">
+                    <div>
+                        <h3 class="cuerpo__titulo2">Alta Montaña</h3>
+                        <div class="cuerpo__descripcion">
+                            <div>
+                                <p>Esta región, ubicada por encima de los 3.000 metros sobre el nivel del mar, y hasta los 4.500 metros, posee una fauna muy escasa, condicionada por la falta de alimentos, las temperaturas extremas y la presencia de las tormentas de nieve y viento. Entre las aves se destacan el cóndor. Los mamíferos están representados por guanacos y pumas.</p>
+                            </div>
+                            <img src="img/altaMontagna.jpg" alt="Alta montaña">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="cuerpo__titulo2">Montaña</h3>
+                        <div class="cuerpo__descripcion">
+                            <div>
+                                <p>En los terrenos ubicados a alturas menores de 3.000 metros existen numerosos valles y quebradas donde la fauna encuentra mejor refugio y más alimento que en las altas cumbres. Entre las aves características de la zona se destacan el ñandú petiso cordillerano, la perdiz serrana chica, el pato cortacorriente, el pato crestón, el cóndor, el águila mora y el aguilucho, el cernícalo, el búho virginiano.</p>
+                                <p>Los mamíferos más comunes en la zona son: guanacos, pumas, zorros colorados, cuises, ratones, liebres europeas y dos especies de murciélago, el común y el orejudo chico. también hay reptiles, como el lagarto de cola espinuda, la yarará ñata y la culebra ratonera.</p>
+                            </div>
+                            <img src="img/montagna.jpg" alt="Montaña">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="cuerpo__titulo2">Zona Preserrana</h3>
+                        <div class="cuerpo__descripcion">
+                            <div>
+                                <p>Esta zona tiene una fauna similar a la del monte, pero dañada por la acción del hombre. Allí se encuentran, entre las aves, el ñandú común, el águila mora, el aguilucho, el halconcito y el chimango. Los mamíferos característicos son el puma, el zorro gris, el gato montés, el zorrino.</p>
+                            </div>
+                            <img src="img/preserrana.jpg" alt="Zona Preserrana">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="cuerpo__titulo2">El Monte</h3>
+                        <div class="cuerpo__descripcion">
+                            <div>
+                                <p>El monte comprende las extensas llanuras del este mendocino, en parte muy medanosas, con radicales salpicados de bosquecillos de algarrobo y chañar. Aquí habitan el ñandú, la perdiz de monte, la perdiz chica, la martineta, el chimango, el carancho, el aguilucho y el cernícalo. También hay mamíferos, como murciélagos, peludos, zorros grises y gatos monteses. Entre los reptiles se cuentan lagartijas, lagartos verdes, boas de las vizcacheras y tortugas terrestres.</p>
+                            </div>
+                            <img src="img/monte.jpg" alt="Monte">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="cuerpo__titulo2">Payunia</h3>
+                        <div class="cuerpo__descripcion">
+                            <div>
+                                <p>En este paisaje árido, modelado por la actividad volcánica con vegetación adaptada a la falta de agua, las especies características son las siguientes: ñandú petiso o choique, jote cabeza negra, chimango, águila mora, aguilucho, martineta, chorlo cabezón, chingolo y calandria. Hay mamíferos como marmotas, piches patagónicos, liebres y conejos europeos, maras, vizcachas, chinchillones, cuises, tunduques, guanacos, pumas, zorrinos patagónicos o chiñes y zorros grises. Entre los reptiles están la yarará nata, la culebra ratonera, el matuasto y la lagartija. Los anfibios más comunes son el sapo y la ranita andinos.</p>
+                            </div>
+                            <img src="img/payunia.jpg" alt="Payunia">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="cuerpo__titulo2">Ambientes Acuáticos</h3>
+                        <div class="cuerpo__descripcion">
+                            <div>
+                                <p>Esta región, que comprende los pantanos, esteros y lagunas naturales, como laguna de Llancanelo, laguna Blanca, laguna de los Álamos, La salinilla, los pantanos de San Miguel, esteros del Atuel y del salado, tiene una amplia avifauna, representada por flamencos, cisnes coscorobas, cisnes cuello negro, macaes plateados, garzas brujas, garzas moras, gallaretas, patos overos, patos zambuilidores, patos capuchinos, teros comunes y reales. Entre los mamíferos se encuentra el coipo o nutria</p>
+                            </div>
+                            <img src="img/ambAcuatico.jpg" alt="Ambiente acuatico">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>   
+    </div>
+    <!-- Final seccion central con boostrap -->
+    
+    <footer class="footer">
+        <p>2021 Leonardo J. Koryl - Proyecto Final - <a href="error.html">Prueba pagina de error.</a></p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content=""> 
+    <title>Mapa del Sitio | Fauna Mendocina</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Inicio Portada -->
+    <header class="header d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <div class="d-flex justify-content-center" style="height:15vh;">
+                        <img class="header__logo" src="../img/logo1b.png" alt="Logo de Fauna Mendocina">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <h1 class="header__titulo text-center">Fauna Mendocina</h1>
+                </div>
+                <div class="header__idioma col-1">
+                    <a href="mapaSitio.html">ES</a> / <a href="siteMap.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Final Portada -->
+
+    <!-- Inicio nav con bootstrap -->
+    <div id="menu">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <!-- Inicio Ruta de Navegacion, para futuras aplicaciones, una vez se complejice mas la pagina-->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mapa del Sitio</li>
+            </ol>
+            <!-- Final Ruta de Navegacion -->
+            <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../index.html#presentacion">Presentacion</a></li>
+                            <li><a class="dropdown-item" href="../index.html#introduccion">Introduccion</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="mapaSitio.html">Mapa del Sitio</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Indice
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="indice.html">Indice</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="indice.html#mamiferos">Mamiferos</a></li>
+                            <li><a class="dropdown-item" href="indice.html#aves">Aves</a></li>
+                            <li><a class="dropdown-item" href="indice.html#repanf">Reptiles/Anfibios</a></li>
+                            <li><a class="dropdown-item" href="indice.html#insectos">Insectos</a></li>
+                            <li><a class="dropdown-item" href="indice.html#peces">Peces</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Galería
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="galeria.html">Galeria</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeria.html#mamiferos">Mamiferos</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#aves">Aves</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#repanf">Reptiles/Anfibios</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#insectos">Insectos</a></li>
+                            <li><a class="dropdown-item" href="galeria.html#peces">Peces</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tablas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="tablas.html">Tablas</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Juegos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="juegos.html">Juegos</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contacto
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="contacto.html#redes">Redes</a></li>
+                            <li><a class="dropdown-item" href="contacto.html#ongs">ONG's</a></li>
+                            <li><a class="dropdown-item" href="contacto.html#contactanos">Contactanos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Final nav con bootstrap -->
+
+    <!-- Inicio seccion central con boostrap -->
+    <div class="d-flex containe col-12">
+        <!-- Inicio barra lateral, debe desaparecer para dispositivos pequeños -->
+        <aside class="col-md-3 aside">
+            <div>
+                <h3 class="aside__titulo">Informacion Util</h3>
+                <ol><h4>Cosejos sobre el comportamiento frente a la fauna salvaje:</h4>
+                    <li>
+                        <dt>SI ES POSIBLE, VISITE A LOS ANIMALES EN SU HÁBITAT NATURAL</dt>
+                        <dd>Si planea la opción más cómoda de visitar un santuario o zoológico, asegúrese de que cuenta con acreditación y una administración profesional.</dd>
+                    </li>
+                    <li>
+                        <dt>VER A LOS ANIMALES COMPORTARSE NATURALMENTE</dt>
+                        <dd>Los encantadores de serpientes y los circos de monos pueden ser atractivos, pero lo que sucede detrás del telón puede horrorizarlo. Para no fomentar estas prácticas, busque un santuario de elefantes respetado o tome un paseo en jeep para admirar a los elefantes en su hábitat natural.</dd>
+                    </li>
+                    <li>
+                        <dt>SE PROHÍBE ACARICIAR</dt>
+                        <dd>Esta instrucción podría decepcionarle, pero hay que comprender los malos tratos que rodean a las instalaciones que ofrecen experiencias de participación activa o contacto cercano con los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>GASTE EL DINERO DE FORMA SOSTENIBLE</dt>
+                        <dd>Si realmente le preocupa el bienestar de los animales y la sustentabilidad de la fauna silvestre, considere contratar a un grupo de expediciones en vez de organizar cada actividad usted mismo.</dd>
+                    </li>
+                    <li>
+                        <dt>RESPETE A LOS ANIMALES</dt>
+                        <dd>Es peligroso para usted y también puede causarle problemas al animal. Además, por supuesto, jamás alimente a los animales.</dd>
+                    </li>
+                    <li>
+                        <dt>ATENCIÓN CON LOS RECUERDOS</dt>
+                        <dd>Asegúrese de evaluar cuidadosamente lo que lleve consigo a casa de su aventura con la fauna silvestre. </dd>
+                    </li>
+                </ol>
+            </div>    
+        </aside>
+        <!-- Final barra lateral -->
+
+        <section class="cuerpo col-md-9">
+            <ul class="cuerpo__listaMapa">
+                <li><h3 class="cuerpo__titulo2"><a href="../index.html">Inicio</a></h3>
+                    <ul>
+                        <li><a href="mapaSitio.html">Mapa del Sitio</a></li>
+                    </ul>
+                </li>
+                <li><h3 class="cuerpo__titulo2"><a href="indice.html">Indice</a></h3></li>
+                <li><h3 class="cuerpo__titulo2"><a href="galeria.html">Galería</a></h3></li>
+                <li><h3 class="cuerpo__titulo2"><a href="tablas.html">Tablas</a></h3></li>
+                <li><h3 class="cuerpo__titulo2"><a href="contacto.html">Contacto</a></h3></li>
+            </ul>
+        </section>   
+    </div>
+    <!-- Final seccion central con boostrap -->
+    
+    <footer class="footer">
+        <p>2021 Leonardo J. Koryl - Proyecto Final</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

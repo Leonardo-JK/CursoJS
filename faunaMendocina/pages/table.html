@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Table of data on the fauna of Mendoza in the that we can find, description by groups, population, species, more numerous and in danger of extinction">
+    <meta name="keywords" content="Tables, fauna, Mendoza, danger, extinction, data, population">
+    <title>Tables | Mendoza's Wildlife</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Inicio Portada -->
+    <header class="header d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <div class="d-flex justify-content-center" style="height:15vh;">
+                        <img class="header__logo" src="../img/logo1b.png" alt="Mendoza's Wildlife's logo">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <h1 class="header__titulo text-center">Mendoza's Wildlife</h1>
+                </div>
+                <div class="header__idioma col-1">
+                    <a href="tablas.html">ES</a> / <a href="table.html">EN</a> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Final Portada -->
+
+    <!-- Inicio nav con bootstrap -->
+    <div id="menu">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar__link navbar-brand justify-self-end" href="#">Menu</a>
+            <!-- Inicio Ruta de Navegacion -->
+            <ol id="breadcrumb" class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="home.html">Home</a></li>
+            </ol>
+            <!-- Final Ruta de Navegacion -->
+            <button class="navbar__button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="home.html">Home</a></li> 
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="home.html#presentacion">Presentation</a></li> 
+                            <li><a class="dropdown-item" href="home.html#introduccion">Introduction</a></li> 
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="siteMap.html">Site Map</a></li> 
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Index
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="index2.html">Index</a></li> 
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index2.html#mamiferos">Mammals</a></li> 
+                            <li><a class="dropdown-item" href="index2.html#aves">Birds</a></li> 
+                            <li><a class="dropdown-item" href="index2.html#repanf">Reptiles/Amphibians</a></li> 
+                            <li><a class="dropdown-item" href="index2.html#insectos">Insects</a></li> 
+                            <li><a class="dropdown-item" href="index2.html#peces">Fishes</a></li> 
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Galery
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="galery.html">Galery</a></li> 
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galery.html#mamiferos">Mammals</a></li>
+                            <li><a class="dropdown-item" href="galery.html#aves">Birds</a></li> 
+                            <li><a class="dropdown-item" href="galery.html#repanf">Reptiles/Amphibians</a></li> 
+                            <li><a class="dropdown-item" href="galery.html#insectos">Insects</a></li> 
+                            <li><a class="dropdown-item" href="galery.html#peces">Fishes</a></li> 
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tables
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="table.html">Tables</a></li> 
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li> 
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="contact.html#redes">Networks</a></li> 
+                            <li><a class="dropdown-item" href="contact.html#ongs">NGO's</a></li> 
+                            <li><a class="dropdown-item" href="contact.html#contactanos">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Final nav con bootstrap -->
+
+    <!-- Inicio seccion central con boostrap -->
+    <div class="d-flex containe col-12">
+        <!-- Inicio barra lateral, debe desaparecer para dispositivos pequeños -->
+        <aside class="col-md-3 aside">
+            <div>
+                <h3 class="aside__titulo">Useful information</h3>
+                <ol><h4>Advice on behavior towards wildlife:</h4>
+                    <li>
+                        <dt>IF POSSIBLE, VISIT THE ANIMALS IN THEIR NATURAL HABITAT</dt>
+                        <dd>If you plan the most comfortable option of visiting a sanctuary or zoo, make sure it is accredited and professionally managed.</dd>
+                    </li>
+                    <li>
+                        <dt>SEE ANIMALS BEHAVE NATURALLY</dt>
+                        <dd>Snake charmers and monkey circuses may be alluring, but what happens behind the scenes can horrify you. To avoid encouraging these practices, find a respected elephant sanctuary or take a jeep ride to admire the elephants in their natural habitat.</dd>
+                    </li>
+                    <li>
+                        <dt>IT IS PROHIBITED TO CARRY</dt>
+                        <dd>This instruction might disappoint you, but you have to understand the mistreatment that surrounds facilities that offer experiences of active participation or close contact with animals.</dd>
+                    </li>
+                    <li>
+                        <dt>SPEND MONEY IN A SUSTAINABLE WAY</dt>
+                        <dd>If you are really concerned about animal welfare and wildlife sustainability, consider hiring an expedition group rather than organizing each activity yourself.</dd>
+                    </li>
+                    <li>
+                        <dt>RESPECT ANIMALS</dt>
+                        <dd>It is dangerous for you and can also cause problems for the animal. Also, of course, never feed the animals.</dd>
+                    </li>
+                    <li>
+                        <dt>ATTENTION WITH MEMORIES</dt>
+                        <dd>Be sure to carefully evaluate what you bring home from your wildlife adventure.</dd>
+                    </li>
+                </ol>
+            </div>    
+        </aside>
+        <!-- Final barra lateral -->
+        
+        <section class="cuerpo contane-fluid col-md-9">
+            <!-- Inicio Tabla -->
+            <div class="table-responsive">
+                <table class="cuerpo__table datos1 table align-middle" border="solid">
+                    <thead>
+                        <tr>
+                            <th>Groups</th>
+                            <th>Total Individuals [millions]</th>
+                            <th>Number of Species</th>
+                            <th>The 5 most numerous species</th>
+                            <th>Number of threatened species</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="index2.html#mamiferos">Mammals</a></td>
+                            <td>2.5</td>
+                            <td>15</td>
+                            <td>
+                                <ol>
+                                    <li>Guanaco</li>
+                                    <li>Andean Fox</li>
+                                    <li>Zorrillo</li>
+                                    <li>Lesser Grison</li>
+                                    <li>Cougar</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>No danger: 11</li>
+                                    <li>Low threat: 3</li>
+                                    <li>Danger of extinction: 1</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="index2.html#aves">Birds</a></td>
+                            <td>7.3</td>
+                            <td>38</td>
+                            <td>
+                                <ol>
+                                    <li>Pigeon</li>
+                                    <li>Pigeon</li>
+                                    <li>Peregrine Falcon</li>
+                                    <li>Scissor-tailed</li>
+                                    <li>Condor</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>No danger: 20</li>
+                                    <li>Low threat: 15</li>
+                                    <li>Danger of extinction: 3</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="index2.html#repanf">Reptiles/Amphibians</a></td>
+                            <td>12.1</td>
+                            <td>18</td>
+                            <td>
+                                <ol>
+                                    <li>Frog</li>
+                                    <li>Gecko Salamanca</li>
+                                    <li>Argentine Coral</li>
+                                    <li>Land Turtle</li>
+                                    <li>Austral Cascabel</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>No danger: 13</li>
+                                    <li>Low threat: 3</li>
+                                    <li>Danger of extinction: 2</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="index2.html#insectos">Insects</a></td>
+                            <td>100.5</td>
+                            <td>40</td>
+                            <td>
+                                <ol>
+                                    <li>Argentine Red Ant</li>
+                                    <li>Black Ant</li>
+                                    <li>Locust</li>
+                                    <li>Common Mosquito</li>
+                                    <li>Cockroach</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>No danger: 38</li>
+                                    <li>Low threat: 2</li>
+                                    <li>Danger of extinction: 0</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="index2.html#peces">Fishes</a></td>
+                            <td>8.7</td>
+                            <td>25</td>
+                            <td>
+                                <ol>
+                                    <li>Pejerey</li>
+                                    <li>Rainbow Trout</li>
+                                    <li>Carpa</li>
+                                    <li>Morenita</li>
+                                    <li>Toothy</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>No danger: 20</li>
+                                    <li>Low threat: 3</li>
+                                    <li>Danger of extinction: 2</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Final Tabla -->
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>2021 Leonardo Koryl - Final Proyect</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>   
+
+</body>
+</html>   
