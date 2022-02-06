@@ -16,11 +16,11 @@ $(document).ready(function() {
     $("#sesion").css("display", "flex");
     $("#sesion").css("flex-direction", "column");
     $("#sesion").css("align-items", "center");
-    
+
     $("#sesion").append(userDiv);
     $("#sesion").append(passDiv);
     $("#sesion").append(ingresoDiv);
-    
+
     $("#ingresoDiv").css("display", "flex");
     $("#ingresoDiv").css("flex-direction", "column");
     $("#ingresoDiv").css("align-items", "center");
@@ -30,11 +30,11 @@ $(document).ready(function() {
     $("#userDiv p, #passDiv p").css("text-align", "center");
     $("#userDiv p, #passDiv p").css("margin", "0");
     $("#userDiv p, #passDiv p").css("text-indent", "0");
-    
+
     $("#userDiv").append("<input id='userInput'>");
     $("#userInput").prop("required", true);
     $("#userInput").attr("type", "text");
-    
+
     $("#passDiv").append("<input id='passInput'>");
     $("#passInput").attr("type", "password");
 
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     $("#ingresoDiv").append("<button id='registro'></button>");
     $("#registro").text("Registrarse");
-    
+
     $("#ingresar").on("click", verificarUsuario);
 
     $("#ingresarInv").on("click", () => {sessionStorage.setItem("user", JSON.stringify({usuario: "invitado", puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0}));
@@ -55,6 +55,7 @@ $(document).ready(function() {
                                     $("#queAnimalEs").attr("href", "#");
                                     $("#cuantoSabes").attr("href", "#");
                                     $("#sesion").css("visibility", "hidden");
+                                    $("#encabezado").append("<h2>Elije el juego.</h2>");
                                     console.log(JSON.parse(sessionStorage.usuarioActivo));
                                 });
     $("#registro").on("click", registrar);
@@ -63,11 +64,6 @@ $(document).ready(function() {
         $(".popup").css("visibility", "hidden");
     });
 
-    if(sessionStorage.usuarioActivo != ""){
-        $("#queAnimalEs").attr("href", "#");
-        $("#cuantoSabes").attr("href", "#");
-    }
-
     function extraerUsuario(us, array){
         console.log(us);
         console.log("array: " + array);
@@ -75,7 +71,7 @@ $(document).ready(function() {
         for(const u of array){
             if(us === u.usuario){
                 return u;
-            } 
+            }
         }
 
         return {usuario: "error"};
@@ -87,7 +83,7 @@ $(document).ready(function() {
 
         userTemp = {};
         let lStorage = JSON.parse(localStorage.usuariosFM);
-        
+
         userTemp = extraerUsuario(user, lStorage);
 
         if(userTemp.usuario === "error" || passw !== userTemp.password){
@@ -108,8 +104,9 @@ $(document).ready(function() {
             $("#sesion").css("visibility", "hidden");
             $("#queAnimalEs").attr("href", "#");
             $("#cuantoSabes").attr("href", "#");
+            $("#encabezado").append("<h2>Elije el juego.</h2>");
             return;
-        } 
+        }
 
         console.log(sessionStorage.usuarioActivo);
         console.log(JSON.parse(localStorage.usuariosFM))
