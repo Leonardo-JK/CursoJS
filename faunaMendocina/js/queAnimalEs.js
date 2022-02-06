@@ -459,6 +459,14 @@ window.addEventListener('load', function() {
     //
 
     // -> Eventos que determinan lanzan los juegos.
-    queAnimalEs.onclick = cargaQueAnimalEs;
+    queAnimalEs.onclick = () => {
+        if(sessionStorage.usuarioActivo === "" || sessionStorage.getItem("usuarioActivo") == undefined){
+            document.getElementById("mensaje1").innerHTML = "Debes ingresar con tu usuario y contraseña o ingresa como invitado si no estas registrado."
+            document.getElementById("mensaje2").innerHTML = ""
+            document.querySelector(".popup").style.visibility = "visible";
+        } else {
+            cargaQueAnimalEs(); 
+        }
+    };
     // <- 
 }, false);

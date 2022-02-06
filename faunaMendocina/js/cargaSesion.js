@@ -1,152 +1,152 @@
-window.addEventListener('load', function() {
+$(document).ready(function() {
     if(localStorage.usuariosFM === undefined){
         localStorage.setItem("usuariosFM", JSON.stringify([]));
     }
 
     sessionStorage.setItem("usuarioActivo", "");
-    
-    let userDiv = document.createElement("div");
-    let passDiv = document.createElement("div");
-    let ingresoDiv = document.createElement("div");
-    
-    document.getElementById("sesion").appendChild(userDiv);
-    userDiv.id = "userDiv";
-    document.getElementById("sesion").appendChild(passDiv);
-    passDiv.id = "passDiv";
-    document.getElementById("sesion").appendChild(ingresoDiv);
-    ingresoDiv.id = "ingresoDiv";
-    let userTag = document.createElement("p");
-    userTag.innerHTML = "User"
-    userTag.style.textAlign = "center";
-    userTag.style.margin = 0;
-    userTag.style.textIndent = 0;
-    let passTag = document.createElement("p");
-    passTag.innerHTML = "Password";
-    passTag.style.textAlign = "center";
-    passTag.style.margin = 0;
-    passTag.style.textIndent = 0;
-    let userInput = document.createElement("input");
-    userInput.id = "userInput";
-    userInput.required = true;
-    userInput.type ="text";
-    let passInput = document.createElement("input");
-    passInput.id = "passInput";
-    passInput.type = "password";
 
-    let ingresar = document.createElement("button");
-    ingresar.id = "ingresar";
-    ingresar.innerText = "INGRESAR";
-    let ingresarInv = document.createElement("button");
-    ingresarInv.id = "ingresarInv";
-    ingresarInv.innerText = "Ingresar como invitado";
-    ingresarInv.style.marginBottom = "1rem";
-    let registro = document.createElement("button");
-    registro.id = "registro";
-    registro.innerText = "Registrarse";
-    
+    let userTemp;
+    let user;
+    let passw;
 
-    document.getElementById("sesion").style.display = "flex";
-    document.getElementById("sesion").style.flexDirection = "column";
-    document.getElementById("sesion").style.alignItems = "center";
+    let userDiv = "<div id='userDiv'></div>";
+    let passDiv = "<div id='passDiv'></div>";
+    let ingresoDiv = "<div id='ingresoDiv'></div>";
 
-    document.getElementById("ingresoDiv").style.display = "flex";
-    document.getElementById("ingresoDiv").style.flexDirection = "column";
-    document.getElementById("ingresoDiv").style.alignItems = "center";
+    $("#sesion").css("display", "flex");
+    $("#sesion").css("flex-direction", "column");
+    $("#sesion").css("align-items", "center");
 
-    document.getElementById("userDiv").appendChild(userTag);
-    document.getElementById("userDiv").appendChild(userInput);
-    document.getElementById("passDiv").appendChild(passTag);
-    document.getElementById("passDiv").appendChild(passInput);
-    document.getElementById("ingresoDiv").appendChild(ingresar);
-    document.getElementById("ingresoDiv").appendChild(ingresarInv);
-    document.getElementById("ingresoDiv").appendChild(registro);
+    $("#sesion").append(userDiv);
+    $("#sesion").append(passDiv);
+    $("#sesion").append(ingresoDiv);
 
-    ingresar.onclick = verificarUsuario;
-    ingresarInv.onclick = () => {sessionStorage.setItem("user", JSON.stringify({usuario: "invitado", puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0}));
+    $("#ingresoDiv").css("display", "flex");
+    $("#ingresoDiv").css("flex-direction", "column");
+    $("#ingresoDiv").css("align-items", "center");
+
+    $("#userDiv").append("<p>User</p>");
+    $("#passDiv").append("<p>Password</p>");
+    $("#userDiv p, #passDiv p").css("text-align", "center");
+    $("#userDiv p, #passDiv p").css("margin", "0");
+    $("#userDiv p, #passDiv p").css("text-indent", "0");
+
+    $("#userDiv").append("<input id='userInput'>");
+    $("#userInput").prop("required", true);
+    $("#userInput").attr("type", "text");
+
+    $("#passDiv").append("<input id='passInput'>");
+    $("#passInput").attr("type", "password");
+
+    $("#ingresoDiv").append("<button id='ingresar'></button>");
+    $("#ingresar").text("INGRESAR");
+
+    $("#ingresoDiv").append("<button id='ingresarInv'></button>");
+    $("#ingresarInv").text("Ingresar como invitado");
+    $("#ingresarInv").css("margin-bottom", "1rem");
+
+    $("#ingresoDiv").append("<button id='registro'></button>");
+    $("#registro").text("Registrarse");
+
+    $("#ingresar").on("click", verificarUsuario);
+
+    $("#ingresarInv").on("click", () => {sessionStorage.setItem("user", JSON.stringify({usuario: "invitado", puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0}));
                                     sessionStorage.usuarioActivo = sessionStorage.user;
-                                    document.getElementById("queAnimalEs").setAttribute("href", "#");
-                                    document.getElementById("cuantoSabes").setAttribute("href", "#");
-                                    document.getElementById("sesion").style.visibility = "hidden";
+                                    $("#queAnimalEs").attr("href", "#");
+                                    $("#cuantoSabes").attr("href", "#");
+                                    $("#sesion").css("visibility", "hidden");
+                                    $("#encabezado").append("<h2>Elije el juego.</h2>");
                                     console.log(JSON.parse(sessionStorage.usuarioActivo));
-                                }
-    registro.onclick = registrar;
+                                });
+    $("#registro").on("click", registrar);
 
-    document.querySelector(".popup__close").onclick = () => {
-        document.querySelector(".popup").style.visibility = "hidden";
-    };
+    $(".popup__close").click(() => {
+        $(".popup").css("visibility", "hidden");
+    });
 
-    if(sessionStorage.usuarioActivo != ""){
-        document.getElementById("queAnimalEs").setAttribute("href", "#");
-        document.getElementById("cuantoSabes").setAttribute("href", "#");
-    }
-
-    function extraerUsuario(user, array){
+    function extraerUsuario(us, array){
+        console.log(us);
+        console.log("array: " + array);
+        console.log(userTemp);
         for(const u of array){
-            if(user === u.usuario){
-                userTemp = u;
-                return;
+            if(us === u.usuario){
+                return u;
             }
         }
+
+        return {usuario: "error"};
     }
 
     function verificarUsuario(){
-        let user = userInput.value;
-        let passw = passInput.value;
+        user = $("#userInput").val();
+        passw = $("#passInput").val();
 
+        userTemp = {};
         let lStorage = JSON.parse(localStorage.usuariosFM);
 
-        extraerUsuario(user, lStorage);
+        userTemp = extraerUsuario(user, lStorage);
 
-        if(user === userTemp.usuario && passw === userTemp.password){
-                sessionStorage.setItem("usuarioActivo", JSON.stringify(userTemp));
-                document.getElementById("mensaje1").innerHTML = "Bienvenido " + userTemp.usuario;
-                document.getElementById("mensaje2").innerHTML = "";
-                document.querySelector(".popup").style.visibility = "visible";
-                document.getElementById("sesion").style.visibility = "hidden";
-                document.getElementById("queAnimalEs").setAttribute("href", "#");
-                document.getElementById("cuantoSabes").setAttribute("href", "#");
-                return;
-            
+        if(userTemp.usuario === "error" || passw !== userTemp.password){
+            $("#mensaje1").html("Usuario o contraseña invalidos.");
+            $("#mensaje2").html("Intentenlo de nuevo o registre un nuevo usuario.");
+            $(".popup").css("visibility", "visible");
+
+            $(".popup__close").click(() => {
+                $(".popup").css("visibility", "hidden");;
+            });
+
+        } else if (user === userTemp.usuario && passw === userTemp.password){
+
+            sessionStorage.setItem("usuarioActivo", JSON.stringify(userTemp));
+            $("#mensaje1").html("Bienvenido " + userTemp.usuario);
+            $("#mensaje2").html("");
+            $(".popup").css("visibility", "visible");
+            $("#sesion").css("visibility", "hidden");
+            $("#queAnimalEs").attr("href", "#");
+            $("#cuantoSabes").attr("href", "#");
+            $("#encabezado").append("<h2>Elije el juego.</h2>");
+            return;
         }
-        document.getElementById("mensaje1").innerHTML = "Usuario o contraseña invalidos."
-        document.getElementById("mensaje2").innerHTML = "Intentenlo de nuevo o registre un nuevo usuario."
-        document.querySelector(".popup").style.visibility = "visible";
-        
-        document.querySelector(".popup__close").onclick = () => {
-            document.querySelector(".popup").style.visibility = "hidden";
-        };
 
         console.log(sessionStorage.usuarioActivo);
         console.log(JSON.parse(localStorage.usuariosFM))
     }
 
     function registrar(){
-        let user = userInput.value;
-        let passw = passInput.value;
+        user = $("#userInput").val();
+        passw = $("#passInput").val();
 
         let lStorage = JSON.parse(localStorage.usuariosFM);
 
-        for(const u of lStorage){
-            if(user === u.usuario){
-                document.getElementById("mensaje1").innerHTML = "Usuario ya registrado."
-                document.getElementById("mensaje2").innerHTML = "Elija otro nombre de usuario."
-                document.querySelector(".popup").style.visibility = "visible";
-                return;
+        if(passw === "" || user === ""){
+            $("#mensaje1").html("Por favor ingrese un usuario y contraseña validos.");
+            $("#mensaje2").html("");
+            $(".popup").css("visibility", "visible");
+
+            $(".popup__close").click(() => {
+                $(".popup").css("visibility", "hidden");;
+            });
+
+        } else {
+            for(const u of lStorage){
+                if(user === u.usuario){
+                    $("#mensaje1").html("Usuario ya registrado.");
+                    $("#mensaje2").html("Elija otro nombre de usuario.");
+                    $(".popup").css("visibility", "visible");
+                    return;
+                }
             }
+
+            lStorage.push({id: (lStorage.length + 1), usuario: user, password: passw, puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0});
+            localStorage.usuariosFM = JSON.stringify(lStorage);
+
+            $("#mensaje1").html("Usuario registrado correctamente.");
+            $("#mensaje2").html("");
+            $(".popup").css("visibility", "visible");
         }
-
-        lStorage.push({id: (lStorage.length + 1), usuario: user, password: passw, puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0});
-        localStorage.usuariosFM = JSON.stringify(lStorage);
-
-        document.getElementById("mensaje1").innerHTML = "Usuario registrado correctamente.";
-        document.getElementById("mensaje2").innerHTML = ""
-        document.querySelector(".popup").style.visibility = "visible";
-
     }
 
-    let userTemp;
-
     console.log(sessionStorage.usuarioActivo);
-    console.log(JSON.parse(localStorage.usuariosFM))
 
-}, false);
+
+});
