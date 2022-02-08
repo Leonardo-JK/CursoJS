@@ -58,7 +58,7 @@ $(document).ready(function() {
                                     $("#cuantoSabes").attr("href", "#");
                                     $("#sesion").slideUp(500, () => {
                                         $("#encabezado").append("<h2 style='display:none; margin-top: 5rem;'>Elije el juego.</h2>");
-                                        $("#encabezado h2").fadeIn(1000);
+                                        $("#encabezado h2").slideDown(1000);
                                         }
                                     );
                                     console.log(JSON.parse(sessionStorage.usuarioActivo));
