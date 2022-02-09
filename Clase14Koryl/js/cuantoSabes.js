@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
     function obtenerDatos() {
         $.get(URL, function(response, estado) {
             if(estado === "success"){
-                individuos = response;
+                individuos = JSON.parse(response);
             }
         });
     }
@@ -41,8 +41,6 @@ window.addEventListener('load', function() {
         alert("Hubo un error al cargar los datos o el tiempo de respuesta de la base de datos fue mayor a la esperada. Por recarga la pagina o espera un poco mas.");
         loopEspera();
     }
-    
-    loopEspera();
     // <-
 
     
