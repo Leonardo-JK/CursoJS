@@ -48,20 +48,25 @@ $(document).ready(function() {
     $("#ingresoDiv").append("<button id='registro'></button>");
     $("#registro").text("Registrarse");
 
+    $(".popup").hide();
+
     $("#ingresar").on("click", verificarUsuario);
 
     $("#ingresarInv").on("click", () => {sessionStorage.setItem("user", JSON.stringify({usuario: "invitado", puntajeQAEF: 0, puntajeQAEM: 0, puntajeQAED: 0, puntajeCS: 0}));
                                     sessionStorage.usuarioActivo = sessionStorage.user;
                                     $("#queAnimalEs").attr("href", "#");
                                     $("#cuantoSabes").attr("href", "#");
-                                    $("#sesion").css("visibility", "hidden");
-                                    $("#encabezado").append("<h2>Elije el juego.</h2>");
+                                    $("#sesion").slideUp(500, () => {
+                                        $("#encabezado").append("<h2 style='display:none; margin-top: 5rem;'>Elije el juego.</h2>");
+                                        $("#encabezado h2").slideDown(1000);
+                                        }
+                                    );
                                     console.log(JSON.parse(sessionStorage.usuarioActivo));
                                 });
     $("#registro").on("click", registrar);
 
     $(".popup__close").click(() => {
-        $(".popup").css("visibility", "hidden");
+        $(".popup").fadeOut(500);
     });
 
     function extraerUsuario(us, array){
@@ -89,10 +94,10 @@ $(document).ready(function() {
         if(userTemp.usuario === "error" || passw !== userTemp.password){
             $("#mensaje1").html("Usuario o contraseña invalidos.");
             $("#mensaje2").html("Intentenlo de nuevo o registre un nuevo usuario.");
-            $(".popup").css("visibility", "visible");
+            $(".popup").fadeIn(300);
 
             $(".popup__close").click(() => {
-                $(".popup").css("visibility", "hidden");;
+                $(".popup").fadeOut(100);
             });
 
         } else if (user === userTemp.usuario && passw === userTemp.password){
@@ -100,8 +105,8 @@ $(document).ready(function() {
             sessionStorage.setItem("usuarioActivo", JSON.stringify(userTemp));
             $("#mensaje1").html("Bienvenido " + userTemp.usuario);
             $("#mensaje2").html("");
-            $(".popup").css("visibility", "visible");
-            $("#sesion").css("visibility", "hidden");
+            $(".popup").fadeIn(300);
+            $(".popup").fadeOut(100);
             $("#queAnimalEs").attr("href", "#");
             $("#cuantoSabes").attr("href", "#");
             $("#encabezado").append("<h2>Elije el juego.</h2>");
@@ -121,10 +126,10 @@ $(document).ready(function() {
         if(passw === "" || user === ""){
             $("#mensaje1").html("Por favor ingrese un usuario y contraseña validos.");
             $("#mensaje2").html("");
-            $(".popup").css("visibility", "visible");
+            $(".popup").fadeIn(300);
 
             $(".popup__close").click(() => {
-                $(".popup").css("visibility", "hidden");;
+                $(".popup").fadeOut(100);
             });
 
         } else {
@@ -132,7 +137,7 @@ $(document).ready(function() {
                 if(user === u.usuario){
                     $("#mensaje1").html("Usuario ya registrado.");
                     $("#mensaje2").html("Elija otro nombre de usuario.");
-                    $(".popup").css("visibility", "visible");
+                    $(".popup").fadeIn(300);
                     return;
                 }
             }
@@ -142,7 +147,7 @@ $(document).ready(function() {
 
             $("#mensaje1").html("Usuario registrado correctamente.");
             $("#mensaje2").html("");
-            $(".popup").css("visibility", "visible");
+            $(".popup").fadeIn(300);
         }
     }
 

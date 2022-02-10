@@ -2,11 +2,21 @@ window.addEventListener('load', function() {
     let individuos = [];
     let espera = 0;
 
-    // -> Solicito datos desde el archivo .json
-    fetch("https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json")
-        .then(response => response.json())
-        .then(data => individuos = data)
-    // <-
+    // -> Solicito datos desde el archivo .json mediante AJAX
+    const URL = "https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json";
+
+    function obtenerDatos() {
+        $.get(URL, function(response, estado) {
+            if(estado === "success"){
+                individuos = JSON.parse(response);
+            }
+        });
+    }
+
+    // fetch("https://raw.githubusercontent.com/Leonardo-JK/FaunaMendocina-LeonardoKoryl/main/data/animales.json")
+        // .then(response => response.json())
+        // .then(data => individuos = data)
+    // // <-
 
     // -> Genera un loop de espera de respuesta de datos, que se mantiene mientras no se realice ninguna accion
     //      si el array individuos sigue vacio despues de 500 ms se vuelve a ejucutar y comienza un contador,
@@ -31,8 +41,6 @@ window.addEventListener('load', function() {
         alert("Hubo un error al cargar los datos o el tiempo de respuesta de la base de datos fue mayor a la esperada. Por recarga la pagina o espera un poco mas.");
         loopEspera();
     }
-    
-    loopEspera();
     // <-
 
     
@@ -44,52 +52,55 @@ window.addEventListener('load', function() {
         limpiar("respuestas");
         limpiar("contenido");
         // <- 
-        
-        if(individuos.length === 0){    // -> Si el usuario inicia el juego y los datos no se han cargado, 
-            error();                    //      envia el mensaje e inicia el loop de espera. <-
-        } else {
-            //-> Genera el encabezado del juego.
-            titulo = document.createElement("h2");
-            titulo.innerHTML = "¿Cuánto Sabes?<br><br>";
-            document.getElementById("encabezado").appendChild(titulo);
-
-            presentacion = "Bienvenido, a continuación te hare unas preguntas para ver cuánto has aprendido sobre nuestra fauna local. ¿Estás listo?";
-            cantPreguntas = "¿Cuántas preguntas deseas responder?";
-
-            let descripcion1 = document.createElement("p");
-            descripcion1.id = "descripcion1";
-            descripcion1.innerHTML = presentacion + "<br><br>";
-            document.getElementById("encabezado").appendChild(descripcion1);
-
-            let descripcion2 = document.createElement("p");
-            descripcion2.id = "descripcion2";
-            descripcion2.innerHTML = cantPreguntas;
-            document.getElementById("encabezado").appendChild(descripcion2);
-            // <- 
-
-            // -> Genera la seccion interactiva.
-            document.getElementById("preguntas").style.flexDirection = "column";
-            preguntas = document.createElement("p");
-            preguntas.innerHTML = "";
-            document.getElementById("preguntas").appendChild(preguntas);
             
-            resp.setAttribute("id", "resp");
-            document.getElementById("preguntas").appendChild(resp);
-                
-            send.innerText = "enviar";
-            send.type = "submit";
-            send.id = "send";
-            send.onclick = comenzarJuego;
-            document.getElementById("preguntas").appendChild(send);
-            // <-
+        //-> Genera el encabezado del juego.
+        titulo = document.createElement("h2");
+        titulo.innerHTML = "¿Cuánto Sabes?<br><br>";
+        document.getElementById("encabezado").appendChild(titulo);
 
-            // -> Genera la lista que presentara los resultados.
-            resultados = document.createElement("ul");
-            resultados.innerHTML = "Resultados";
-            resultados.setAttribute("id", "resultadosLista");
-            document.getElementById("respuestas").appendChild(resultados);    
-            // <-
-        }
+        presentacion = "Bienvenido, a continuación te hare unas preguntas para ver cuánto has aprendido sobre nuestra fauna local. ¿Estás listo?";
+        cantPreguntas = "¿Cuántas preguntas deseas responder?";
+
+        let descripcion1 = document.createElement("p");
+        descripcion1.id = "descripcion1";
+        descripcion1.innerHTML = presentacion + "<br><br>";
+        document.getElementById("encabezado").appendChild(descripcion1);
+
+        let descripcion2 = document.createElement("p");
+        descripcion2.id = "descripcion2";
+        descripcion2.innerHTML = cantPreguntas;
+        document.getElementById("encabezado").appendChild(descripcion2);
+        // <- 
+
+        // -> Genera la seccion interactiva.
+        document.getElementById("preguntas").style.flexDirection = "column";
+        preguntas = document.createElement("p");
+        preguntas.innerHTML = "";
+        document.getElementById("preguntas").appendChild(preguntas);
+        
+        resp.setAttribute("id", "resp");
+        document.getElementById("preguntas").appendChild(resp);
+            
+        send.innerText = "enviar";
+        send.type = "submit";
+        send.id = "send";
+        send.onclick = comenzarJuego;
+        document.getElementById("preguntas").appendChild(send);
+        // <-
+
+        // -> Genera la lista que presentara los resultados.
+        resultados = document.createElement("ul");
+        resultados.innerHTML = "Resultados";
+        resultados.setAttribute("id", "resultadosLista");
+        document.getElementById("respuestas").appendChild(resultados);    
+        // <-
+
+        setTimeout(function(){              // -> 
+            if(individuos.length === 0){    // Si el usuario inicia el juego y los datos no se han cargado, 
+                error();                    // envia el mensaje e inicia el loop de espera. 
+            }                               //
+        }, 1000);                           // <-
+        
     }
 
     // -> Funcion para limpiar elementos.
@@ -339,9 +350,11 @@ window.addEventListener('load', function() {
         if(sessionStorage.usuarioActivo === "" || sessionStorage.getItem("usuarioActivo") == undefined){
             document.getElementById("mensaje1").innerHTML = "Debes ingresar con tu usuario y contraseña o ingresa como invitado si no estas registrado."
             document.getElementById("mensaje2").innerHTML = ""
-            document.querySelector(".popup").style.visibility = "visible";
+            $(".popup").fadeIn(300);
         } else {
+            obtenerDatos();
             cargarCuantoSabes(); 
+            setTimeout(loopEspera, 1000);
         }
     }
     // <-    
