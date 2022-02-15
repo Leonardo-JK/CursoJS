@@ -635,7 +635,7 @@ html {
 .cuerpo__contenido #encabezado {
   width: 80%;
 }
-.cuerpo__contenido #encabezado h2 {
+.cuerpo__contenido #encabezado h2, .cuerpo__contenido #encabezado h3 {
   text-align: center;
 }
 .cuerpo__contenido #encabezado p {
@@ -750,7 +750,6 @@ html {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

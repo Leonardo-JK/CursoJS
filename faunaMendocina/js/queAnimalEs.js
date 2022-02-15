@@ -21,9 +21,10 @@ window.addEventListener('load', function() {
 
     // -> Genera un loop de espera de respuesta de datos, que se mantiene mientras no se realice ninguna accion
     //      si el array individuos sigue vacio despues de 500 ms se vuelve a ejucutar y comienza un contador,
-    //      pasado 20 s, envia un msj de error por alert y comienza nuevamente el loop de espera por otros 
-    //      20 s. Al ejecutar la espera de esta forma evita que el hilo se bloquee como pasa con el metodo await, 
-    //      permitiendo el funcionamiento normal de la pagina.       
+    //      pasado 20 s, envia un msj de error por alert y comienza nuevamente el loop de espera por otros
+    //      20 s. Al ejecutar la espera de esta forma evita que el hilo se bloquee como pasa con el metodo await,
+    //      ya el call back de ajax puede entrar entre ejecucion y ejecucion del loop de espera, permitiendo el
+    //      funcionamiento normal de la pagina.
     function loopEspera(){
         if(individuos.length === 0){
             espera++;
@@ -33,7 +34,7 @@ window.addEventListener('load', function() {
                     error();
                 }else {
                     loopEspera();
-                }                
+                }
             }, 500);
         }
     }
@@ -42,8 +43,12 @@ window.addEventListener('load', function() {
         alert("Hubo un error al cargar los datos o el tiempo de respuesta de la base de datos fue mayor a la esperada. Por recarga la pagina o espera un poco mas.");
         loopEspera();
     }
-    
+
     // <-
+
+    function abrirPopup(){
+        $(".popup").fadeIn(300);
+    }
 
     // -> Carga la presentacion del juego.
     function cargaQueAnimalEs(){
@@ -52,7 +57,7 @@ window.addEventListener('load', function() {
         limpiar("preguntas");
         limpiar("respuestas");
         limpiar("contenido");
-        // <- 
+        // <-
 
         //-> Genera el encabezado del juego.
         titulo = document.createElement("h2");
@@ -71,7 +76,7 @@ window.addEventListener('load', function() {
         descripcion2.id = "descripcion2";
         descripcion2.innerHTML = dificultad;
         document.getElementById("encabezado").appendChild(descripcion2);
-        // <- 
+        // <-
 
         document.getElementById("preguntas").style.flexDirection = "row";
 
@@ -113,9 +118,9 @@ window.addEventListener('load', function() {
         });
         // <-
 
-        setTimeout(function(){              // -> 
-            if(individuos.length === 0){    // Si el usuario inicia el juego y los datos no se han cargado, 
-                error();                    // envia el mensaje e inicia el loop de espera. 
+        setTimeout(function(){              // ->
+            if(individuos.length === 0){    // Si el usuario inicia el juego y los datos no se han cargado,
+                error();                    // envia el mensaje e inicia el loop de espera.
             }                               //
         }, 1000);                           // <-
     }
@@ -153,77 +158,27 @@ window.addEventListener('load', function() {
     }
     // <-
 
-    // -> Inicio juego facil y medio.
+    // -> Inicio juego facil/medio.
     function juegoFacil(){
         limpiar("divImagen");
         limpiar("divRespuestas");
 
         console.log(pregunta);
 
-
         if(pregunta === 10){    // -> Verifica la cantidad de preguntas realizada y si llega al final, muestra el resultado.
             resultado = respCorr / pregunta * 100;
             let final = document.createElement("p");
             final.innerHTML = "Fin del jugo. <br> Has respondido correctamente el " + resultado + " % de las imagenes.";
             limpiar("preguntas");
-            let punt;
-
-            if(dificultadValor === "facil"){                        // -> Evalua el puntaje segun la dificultad
-                punt = JSON.parse(sessionStorage.usuarioActivo).puntajeQAEF;
-                puntaje(punt);
-                
-                if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
-                    let sStorage = JSON.parse(sessionStorage.usuarioActivo);
-                    sStorage.puntajeQAEF = resultado;
-                    sessionStorage.usuarioActivo = JSON.stringify(sStorage);
-                } else {
-                    let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
-                    let lStorage = JSON.parse(localStorage.usuariosFM);
-                    lStorage[i].puntajeQAEF = resultado;
-                    localStorage.usuariosFM = JSON.stringify(lStorage);
-                }
-            } else {
-                punt = JSON.parse(sessionStorage.usuarioActivo).puntajeQAEM;
-                puntaje(punt);
-
-                if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
-                    let sStorage = JSON.parse(sessionStorage.usuarioActivo);
-                    sStorage.puntajeQAEM = resultado;
-                    sessionStorage.usuarioActivo = JSON.stringify(sStorage);
-                } else {
-                    let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
-                    let lStorage = JSON.parse(localStorage.usuariosFM);
-                    lStorage[i].puntajeQAEM = resultado;
-                    localStorage.usuariosFM = JSON.stringify(lStorage);
-                }
-            }                                                       // <-
-
-            function puntaje(punt){
-                if(resultado > punt){
-                    document.getElementById("mensaje1").innerHTML = "Felicidades has mejorado desde tu ultima vez."
-                    document.getElementById("mensaje2").innerHTML = "Sigue asi."
-                    document.querySelector(".popup").style.visibility = "visible";
-                } else if(resultado === punt){
-                    document.getElementById("mensaje1").innerHTML = "Has mantenido tu puntaje."
-                    document.getElementById("mensaje2").innerHTML = "Felicidades."
-                    document.querySelector(".popup").style.visibility = "visible";
-                } else if(resultado < punt && resultado > 0){
-                    document.getElementById("mensaje1").innerHTML = "Has obtenido un puntaje menor al anterior."
-                    document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
-                    document.querySelector(".popup").style.visibility = "visible";
-                } else if(resultado === 0){
-                    document.getElementById("mensaje1").innerHTML = "No has acertado ninguna respuesta."
-                    document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
-                    document.querySelector(".popup").style.visibility = "visible";
-                }
-            }
+            
+            guardarPuntaje(dificultadValor, resultado);
 
             document.getElementById("preguntas").appendChild(final); // <-
 
         } else {
             let id = Math.floor(Math.random() * (individuos.length)) + 1;           // -> Genera un numero random para determinar el animal por id. <-
             let img = Math.floor(Math.random() * (individuos[(id-1)].imagenes[0])); // -> Genera un numero random para genera una imagen del animal,
-                                                                                    // el array de imagenes esta comprendido por el numero de imagenes 
+                                                                                    // el array de imagenes esta comprendido por el numero de imagenes
                                                                                     // disponibles y el nombre generico del archivo para dicho animal. <-
             animal = animalAleatorio(id);
 
@@ -237,53 +192,53 @@ window.addEventListener('load', function() {
                                 heigth: "+=10px"})
                      .animate({width: "-=15px",
                                 heigth: "-=10px"});
-                    
+
 
             let opciones = document.createElement("ul");                    //  -> Crea la lista que presentara las opciones.
             opciones.id = "opciones";                                       //
             opciones.style.listStyle = "none";                              //
             document.getElementById("divRespuestas").appendChild(opciones); // <-
-            
+
             let opcionCorrecta = Math.floor(Math.random() * 5);             // -> Genera una posicion aleatoria en la cual se ubicara la respuesta correcta.
 
+            let array = [];
+            for(let i = 0; i < 4; i++){                                     // -> Carga un array de animales aleatorios incorrectos,
+                id = Math.floor(Math.random() * (individuos.length)) + 1;   //      verificando que no se repitan ni que coincidan 
+                if(array.includes(id) || id === animal.id){                 //      con el animal correcto.
+                    i--;                                                    //
+                } else {                                                    //
+                    array[i] = id;                                          //        
+                }                                                           //    
+            }                                                               // <-
+
+            console.log(array, animal.id);                                          
+
+            let j = 0;
             // -> Enlista todas la opciones.
             for(let i = 0; i < 5; i++){
-                id = Math.floor(Math.random() * (individuos.length)) + 1;
-                let opcionIncorrecta = animalAleatorio(id);                 // -> Carta un animal aleatorio incorrecto. <-
-
+                
                 let opcion = document.createElement("li");
                 opcion.id = "opcion" + i;
                 document.getElementById("opciones").appendChild(opcion);
                 input = document.createElement("input");
                 input.type = "radio";
                 input.name = "opcion";
-                
+
                 let label = document.createElement("label");
                 label.className = "opcion";
-                
-                // -> Verifica que el animal random no sea el mismo que el correcto, en caso de cerlo repite la iteracion.
-                if(opcionIncorrecta === animal){
-                    i--;
-                    continue;
-                }
-                // <-
 
                 // -> Determina si la posicion sera llenada con la opcion correcta o con una incorrecta.
                 if(i === opcionCorrecta){
-                    input.id = animal.nombre;
-                    input.value = animal.nombre;
-                    label.setAttribute("for", animal.nombre);
-                    label.innerHTML = animal.nombre;
+                    llenarOpcion(animal.nombre, input, label);
                     label.id = "opcionCorrecta";
                 } else {
-                    input.id = opcionIncorrecta.nombre;
-                    input.value = opcionIncorrecta.nombre;
-                    label.setAttribute("for", opcionIncorrecta.nombre);
-                    label.innerHTML = opcionIncorrecta.nombre;
+                    llenarOpcion(animalAleatorio(array[j]).nombre, input, label);
+                    j++;
                 }
                 // <-
 
                 console.log(input.id);
+
                 document.getElementById("opcion" + i).appendChild(input);
                 document.getElementById("opcion" + i).appendChild(label);
             }
@@ -294,6 +249,62 @@ window.addEventListener('load', function() {
             send.id = "send2";
             document.getElementById("divRespuestas").appendChild(send);
             document.getElementById("send2").onclick = verificarOpcion;
+        }
+    }
+    // <-
+
+    // -> Setea valores de la opcion
+    function llenarOpcion(nom, inp, lab){
+        inp.id = nom;
+        inp.value = nom;
+        lab.setAttribute("for", nom);
+        lab.innerHTML = nom;
+    }
+    // <-
+
+    // -> Evalua el puntaje y da el msj correspondiente.
+    function guardarPuntaje(string, resul){
+        let sufijo = "";
+        switch (string){
+            case "facil":
+                sufijo = "puntajeQAEF";
+                break;
+            case "medio":
+                sufijo = "puntajeQAEM";
+                break;
+            case "dificil":
+                sufijo = "puntajeQAED";
+                break;
+        }
+
+        let p = JSON.parse(sessionStorage.usuarioActivo)[sufijo];
+        if(resul > p){
+            $("#mensaje1").html("Felicidades has mejorado desde tu ultima vez.");
+            $("#mensaje2").html("Sigue asi.");
+            abrirPopup();
+        } else if(resul === p){
+            $("#mensaje1").html("Has mantenido tu puntaje.");
+            $("#mensaje2").html("Felicidades.");
+            abrirPopup();
+        } else if(resul < p && resul > 0){
+            $("#mensaje1").html("Has obtenido un puntaje menor al anterior.");
+            $("#mensaje2").html("Aun puedes mejorar.");
+            abrirPopup();
+        } else if(resul === 0){
+            $("#mensaje1").html("No has acertado ninguna respuesta.");
+            $("#mensaje2").html("Aun puedes mejorar.");
+            abrirPopup();
+        }
+
+        if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
+            let sStorage = JSON.parse(sessionStorage.usuarioActivo);
+            sStorage[sufijo] = resul;
+            sessionStorage.usuarioActivo = JSON.stringify(sStorage);
+        } else {
+            let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
+            let lStorage = JSON.parse(localStorage.usuariosFM);
+            lStorage[i][sufijo] = resul;
+            localStorage.usuariosFM = JSON.stringify(lStorage);
         }
     }
     // <-
@@ -310,47 +321,20 @@ window.addEventListener('load', function() {
         solucion = document.createElement("p");
         solucion.id = "solucion";
         solucion.innerHTML = "";
-        document.getElementById("divRespuestas").appendChild(solucion);        
+        document.getElementById("divRespuestas").appendChild(solucion);
 
         if(pregunta === 10){    // -> Verifica la cantidad de preguntas realizada y si llega al final, muestra el resultado.
             resultado = respCorr / pregunta * 100;
             solucion.innerHTML = "Fin del juego. <br> Has respondido correctamente el " + resultado + " % de las imagenes.";
             limpiar("preguntas");
-            
-            if(resultado > JSON.parse(sessionStorage.usuarioActivo).puntajeQAED){
-                document.getElementById("mensaje1").innerHTML = "Felicidades has mejorado desde tu ultima vez."
-                document.getElementById("mensaje2").innerHTML = "Sigue asi."
-                document.querySelector(".popup").style.visibility = "visible";
-            } else if(resultado === JSON.parse(sessionStorage.usuarioActivo).puntajeQAED){
-                document.getElementById("mensaje1").innerHTML = "Has mantenido tu puntaje."
-                document.getElementById("mensaje2").innerHTML = "Felicidades."
-                document.querySelector(".popup").style.visibility = "visible";
-            } else if(resultado < JSON.parse(sessionStorage.usuarioActivo).puntajeQAED && resultado > 0){
-                document.getElementById("mensaje1").innerHTML = "Has obtenido un puntaje menor al anterior."
-                document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
-                document.querySelector(".popup").style.visibility = "visible";
-            } else if(resultado === 0){
-                document.getElementById("mensaje1").innerHTML = "No has acertado ninguna respuesta."
-                document.getElementById("mensaje2").innerHTML = "Aun puedes mejorar."
-                document.querySelector(".popup").style.visibility = "visible";
-            }
-            
-            if(JSON.parse(sessionStorage.usuarioActivo).usuario === "invitado"){
-                let sStorage = JSON.parse(sessionStorage.usuarioActivo);
-                sStorage.puntajeQAED = resultado;
-                sessionStorage.usuarioActivo = JSON.stringify(sStorage);
-            } else {
-                let i = JSON.parse(sessionStorage.usuarioActivo).id - 1;
-                let lStorage = JSON.parse(localStorage.usuariosFM);
-                lStorage[i].puntajeQAED = resultado;
-                localStorage.usuariosFM = JSON.stringify(lStorage);
-            }
-                
+
+            guardarPuntaje(dificultadValor, resultado);
+
             document.getElementById("preguntas").appendChild(solucion); // <-
         } else {
             let id = Math.floor(Math.random() * (individuos.length)) + 1;   // -> Genera un numero random para determinar el animal por id. <-
             let img = Math.floor(Math.random() * (individuos[(id-1)].imagenes[0])); // -> Genera un numero random para genera una imagen del animal,
-                                                                                    // el array de imagenes esta comprendido por el numero de imagenes 
+                                                                                    // el array de imagenes esta comprendido por el numero de imagenes
                                                                                     // disponibles y el nombre generico del archivo para dicho animal. <-
             animal = animalAleatorio(id);
 
@@ -358,26 +342,23 @@ window.addEventListener('load', function() {
             imagen.id = "img";                                              //
             imagen.src = "../img/" + animal.imagenes[1] + img + ".jpg";     //
             imagen.style.display = "none";                                  //
-            document.getElementById("divImagen").appendChild(imagen);       // <-    
+            document.getElementById("divImagen").appendChild(imagen);       // <-
             $("#img").fadeIn(1000)
                      .animate({width: "+=15px",
                                 heigth: "+=10px"})
                      .animate({width: "-=15px",
                                 heigth: "-=10px"});
-                     
-            // $("#img").css("box-shadow", "10px 10px 10px grey");
-        } 
-        
-        resp.id = "resp2";
-        resp.type = "text";
-        resp.disabled = false;
-        document.getElementById("divRespuestas").appendChild(resp);
-        
-        send.type = "button";
-        send.value = "Responder";
-        send.id = "send2";
-        document.getElementById("divRespuestas").appendChild(send);
-        document.getElementById("send2").onclick = verificarRespuesta;
+            resp.id = "resp2";
+            resp.type = "text";
+            resp.disabled = false;
+            document.getElementById("divRespuestas").appendChild(resp);
+
+            send.type = "button";
+            send.value = "Responder";
+            send.id = "send2";
+            document.getElementById("divRespuestas").appendChild(send);
+            document.getElementById("send2").onclick = verificarRespuesta;
+        }
     }
     // <-
 
@@ -385,31 +366,38 @@ window.addEventListener('load', function() {
     function verificarRespuesta(){
         respuesta = document.getElementById("resp2").value.toLowerCase();
 
-        if(respuesta === animal.nombre){
-            solucion.style.color = "#27ad27";
-            solucion.innerHTML = "¡Respuesta Correcta!";   
-            respCorr++;       
+        if(respuesta.length === 0){
+            $("#mensaje1").html("Debes ingresar una respuesta.");
+            $("#mensaje2").html("");
+            $(".popup").fadeIn(300);
         } else {
-            solucion.style.color = "red";
-            solucion.innerHTML = "¡Respuesta Incorrecta!";   
+            if(respuesta === animal.nombre){
+                solucion.style.color = "#27ad27";
+                solucion.innerHTML = "¡Respuesta Correcta!";
+                respCorr++;
+            } else {
+                solucion.style.color = "red";
+                solucion.innerHTML = "¡Respuesta Incorrecta!";
+            }
+
+            pregunta++;
+
+            resp.value = "";
+            resp.disabled = true;
+            send.id = "next";
+            send.value = "Siguiente";
+
+            document.getElementById("next").onclick = juegoDificil;
         }
 
-        pregunta++;
-
-        resp.value = "";
-        resp.disabled = true;
-        send.id = "next";
-        send.value = "Siguiente";
-        
-        document.getElementById("next").onclick = juegoDificil;
     }
     // <-
 
     // -> Verificacion de respuesta con Multiple Choice.
     function verificarOpcion() {
         respuesta = document.querySelector('input[name="opcion"]:checked').value;
-        
-        // -> Verifica las oportunidades disponibles segun el modo de juego. 
+
+        // -> Verifica las oportunidades disponibles segun el modo de juego.
         if(dificultadValor === "facil" && cont <= 2){
             cont++;
             color(respuesta);
@@ -503,12 +491,11 @@ window.addEventListener('load', function() {
             document.getElementById("mensaje1").innerHTML = "Debes ingresar con tu usuario y contraseña o ingresa como invitado si no estas registrado."
             document.getElementById("mensaje2").innerHTML = ""
             $(".popup").fadeIn(300);
-            // document.querySelector(".popup").style.visibility = "visible";
         } else {
             obtenerDatos();
             cargaQueAnimalEs();
             setTimeout(loopEspera, 1000);
         }
     };
-    // <- 
+    // <-
 }, false);

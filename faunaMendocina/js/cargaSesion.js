@@ -66,8 +66,16 @@ $(document).ready(function() {
     $("#registro").on("click", registrar);
 
     $(".popup__close").click(() => {
-        $(".popup").fadeOut(500);
+        cerrarPopup();
     });
+
+    function cerrarPopup(){
+        $(".popup").fadeOut(100);
+    }
+
+    function abrirPopup(){
+        $(".popup").fadeIn(300);
+    }
 
     function extraerUsuario(us, array){
         console.log(us);
@@ -94,22 +102,19 @@ $(document).ready(function() {
         if(userTemp.usuario === "error" || passw !== userTemp.password){
             $("#mensaje1").html("Usuario o contraseña invalidos.");
             $("#mensaje2").html("Intentenlo de nuevo o registre un nuevo usuario.");
-            $(".popup").fadeIn(300);
-
-            $(".popup__close").click(() => {
-                $(".popup").fadeOut(100);
-            });
+            abrirPopup();
 
         } else if (user === userTemp.usuario && passw === userTemp.password){
 
             sessionStorage.setItem("usuarioActivo", JSON.stringify(userTemp));
-            $("#mensaje1").html("Bienvenido " + userTemp.usuario);
-            $("#mensaje2").html("");
-            $(".popup").fadeIn(300);
-            $(".popup").fadeOut(100);
             $("#queAnimalEs").attr("href", "#");
             $("#cuantoSabes").attr("href", "#");
-            $("#encabezado").append("<h2>Elije el juego.</h2>");
+            $("#sesion").slideUp(500, () => {
+                    $("#encabezado").append("<h2 style='display:none; margin-top: 5rem;'>Bienvenido " + userTemp.usuario + ".</h2>");
+                    $("#encabezado").append("<h3 style='display:none; margin-top: 2rem;'>Elije el Juego.</h3>");
+                    $("#encabezado h2").slideDown(1000, $("#encabezado h3").slideDown(1000));
+                }
+            );
             return;
         }
 
@@ -126,18 +131,14 @@ $(document).ready(function() {
         if(passw === "" || user === ""){
             $("#mensaje1").html("Por favor ingrese un usuario y contraseña validos.");
             $("#mensaje2").html("");
-            $(".popup").fadeIn(300);
-
-            $(".popup__close").click(() => {
-                $(".popup").fadeOut(100);
-            });
+            abrirPopup();
 
         } else {
             for(const u of lStorage){
                 if(user === u.usuario){
                     $("#mensaje1").html("Usuario ya registrado.");
                     $("#mensaje2").html("Elija otro nombre de usuario.");
-                    $(".popup").fadeIn(300);
+                    abrirPopup();
                     return;
                 }
             }
@@ -147,7 +148,7 @@ $(document).ready(function() {
 
             $("#mensaje1").html("Usuario registrado correctamente.");
             $("#mensaje2").html("");
-            $(".popup").fadeIn(300);
+            abrirPopup();
         }
     }
 
